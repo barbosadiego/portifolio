@@ -71,6 +71,22 @@ main{
   display: none;
 }
 
+.question.show p{
+  display: initial;
+}
+
+.question.show .fa-minus{
+  display: block;
+}
+
+.question .fa-plus{
+  display: block;
+}
+
+.question.show .fa-plus{
+  display: none;
+}
+
 .btn{
   background-color: transparent;
   padding: 3px;
@@ -79,23 +95,9 @@ main{
   cursor: pointer;
   color: #C59D5F;
   transition: .5s;
-}
-
-.fa-minus{
   display: none;
 }
 
-.show{
-  display: initial;
-}
-
-/* .hide{
-  display: none;
-}  */
-/* 
-.fa-plus{
-  display: initial;
-} */
 
 .btn:hover{
   transform: rotate(90deg);

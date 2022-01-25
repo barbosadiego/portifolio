@@ -1,20 +1,9 @@
-const buttons = document.querySelectorAll('.btn');
-const questions = document.querySelectorAll('.card p')
+const questions = document.querySelectorAll(".question");
+const buttons = document.querySelectorAll(".btn");
 
-buttons.forEach((btn, index) => {
-  btn.addEventListener('click', ()=>{     
-    activeItem(index)
-  })
-})
-
-
-function activeItem(index){
-  console.log(index)
-}
-
-
-// const element  = e.target.parentElement.parentElement;
-    // element.querySelector('p').style.display = 'block';
-    // element.querySelector('.fa-minus').classList.add('show')
-    // element.querySelector('.fa-plus').classList.add('hide')
-    // console.log(element)
+buttons.forEach((btn) => {
+  btn.addEventListener("click", (e) => {
+    const element = e.currentTarget.parentElement.parentElement;
+    element.classList.toggle("show");
+  });
+});
