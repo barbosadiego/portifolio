@@ -36,6 +36,7 @@ main{
   display: flex;
   flex-direction: column;
   gap: 2rem;
+  width: 90vw;
 }
 
 .card{
@@ -49,7 +50,6 @@ main{
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
-  /* width: 500px; */
 }
 
 .question > div{
@@ -68,7 +68,7 @@ main{
 .question p{
   border-top: 1px solid rgba(0, 0, 0, 0.2);
   padding-top: 1rem;
-  /* display: none; */
+  display: none;
 }
 
 .btn{
@@ -85,9 +85,17 @@ main{
   display: none;
 }
 
-.fa-plus{
+.show{
   display: initial;
 }
+
+/* .hide{
+  display: none;
+}  */
+/* 
+.fa-plus{
+  display: initial;
+} */
 
 .btn:hover{
   transform: rotate(90deg);
