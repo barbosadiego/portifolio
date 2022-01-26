@@ -1,0 +1,161 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root{
+  --fs-h1: 2rem;
+  --fs-small: .9rem
+}
+
+@media screen and (min-width:600px) {
+  :root{
+    --fs-h1: 4rem
+  }
+}
+
+body{
+  font-family: 'Open Sans', sans-serif;
+  background-color: #f1f2f6;
+}
+
+img{
+  max-width: 100%;
+  display: block;
+}
+
+.content{
+  padding: 3rem 1rem;
+}
+
+.title{
+  font-size: var(--fs-h1);
+  text-align: center;
+  padding: 2rem 0;
+  color: #102A42;
+}
+
+.container{
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  position: relative;
+  background-color: #fff;
+  padding: 1.5rem 2rem;
+  border-radius: 5px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.review-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  text-align: center;
+  display: none;
+}
+
+.review-container.show{
+  display: flex;
+}
+
+@media screen and (min-width:800px) {
+  .container{
+    width: 40vw;
+    margin: 0 auto;
+  }
+}
+
+.person{
+  position: relative;
+}
+
+.person::after{
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  content: '\f10e';
+  color: white;
+  height: 2.5rem;
+  width: 2.5rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: grid;
+  place-items: center;
+  background-color: #49A6E9;
+  border-radius: 50%;
+}
+
+.person::before{
+  content: '';
+  height: 180px;
+  width: 180px;
+  display: block;
+  background: #49A6E9;
+  position: absolute;
+  border-radius: 50%;
+  top: -0.25rem;
+  right: -0.55rem;
+}
+
+.person img{
+  height: 180px;
+  width: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  position: relative;
+}
+
+.name{
+  margin: 1rem 0 .2rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.job{
+  text-transform: uppercase;
+  color: #49A6E9;
+}
+
+.text{
+  font-size: var(--fs-small);
+  color: #102A42;
+}
+
+.buttons{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.buttons > div{
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.fas{
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #49A6E9;
+}
+
+.btn{
+  margin-top: 1rem;
+  padding: .5rem 1.4rem;
+  font-family: inherit;
+  font-size: 1rem;
+  background-color: transparent;
+  border: 2px solid #49A6E9;
+  border-radius: 5px;
+  cursor: pointer;
+  color: #49A6E9;
+  text-transform: capitalize;
+  transition: .3s;
+}
+
+.btn:hover{
+  background-color: #49A6E9;
+  color: #fff;
+}
