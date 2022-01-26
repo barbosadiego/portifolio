@@ -39,7 +39,7 @@ img{
 .container{
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 1rem;
   position: relative;
   background-color: #fff;
   padding: 1.5rem 2rem;
@@ -132,17 +132,18 @@ img{
 .buttons > div{
   display: flex;
   justify-content: center;
-  gap: 1rem;
+  /* gap: 1rem; */
 }
 
 .fas{
   font-size: 1.5rem;
   cursor: pointer;
   color: #49A6E9;
+  padding: 1rem;
 }
 
-.btn{
-  margin-top: 1rem;
+.random{
+  /* margin-top: 1rem; */
   padding: .5rem 1.4rem;
   font-family: inherit;
   font-size: 1rem;
@@ -155,7 +156,7 @@ img{
   transition: .3s;
 }
 
-.btn:hover{
+.random:hover{
   background-color: #49A6E9;
   color: #fff;
 }
