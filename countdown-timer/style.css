@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img{
+  max-width: 100%;
+  display: block;
+}
+
+h1{
+  text-transform: uppercase;
+  font-weight: 500;
+  color: #1A6AA2;
+  letter-spacing: 1px;
+  font-size: 1.8rem;
+}
+
+body{
+  font-family: 'Open Sans', sans-serif;
+  background-color: #f1f2f6;
+  height: 100vh;
+}
+
+.content{
+  display: flex;
+  flex-direction: column;
+  padding: 3rem 1rem;
+}
+
+.intro__content p{
+  font-size: .9rem;
+  font-weight: bold;
+}
+
+.intro__content{
+  padding: 2rem 0;
+}
+
+.intro__content h1{
+  margin-bottom: .5rem;
+}
+
+.timer{
+  display: flex;
+  gap: .5rem;
+  padding-top: 1rem;
+}
+
+.timer > div{
+  height: 5rem;
+  width: 5rem;
+  background-color: #102A42;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.display{
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+@media screen and (min-width:1050px) {
+  .content{
+    max-width: 95vw;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 2.5rem;
+    margin: 3rem auto;
+    padding: 0;
+  }
+  h1{
+    font-size: 2rem;
+  }
+  .intro__content{
+    padding-top: 0;
+  }
+  .intro__content p{
+    font-size: 1.2rem;
+    font-weight: 500;
+  }
+}
