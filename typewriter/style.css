@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Special+Elite&display=swap');
+
+body{
+  height: 80vh;
+  background-color: #444;
+  display: flex;
+  align-items: center;
+  padding: 2rem;
+}
+
+.text{
+  font-family: 'Special Elite', cursive;
+  color: #fff;
+  font-size: 1.9rem;
+  text-align: center;
+  line-height: 1.5;
+  letter-spacing: 5px;
+}
+
+.text::after{
+  content: '|';
+  margin-left: 10px;
+  animation: pisca .9s forwards infinite;
+}
+
+@keyframes pisca{
+  0%, 100%{
+    opacity: 1;
+  }
+  50%{
+    opacity: 0;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  body{
+    height: 90vh;
+    max-width: 50vw;
+    margin: 0 auto;
+  }
+  .text{
+    font-size: 3.5rem;
+    line-height: 1.2;
+  }
+}
