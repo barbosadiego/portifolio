@@ -53,13 +53,14 @@ section{
 .content__titles{
  display: grid;
  grid-template-columns: repeat(3,1fr);
- border-top-left-radius: 9px;
- border-top-right-radius: 9px;
  overflow: hidden;
  background-color: #617d9838;
+ overflow: hidden;
+ border-top-right-radius: 9px;
+ border-top-left-radius: 9px;
 }
 
-.content__titles div{
+.tabTitle{
   padding: 1rem 0;
   text-align: center;
   font-size: 1.4rem;
@@ -67,6 +68,16 @@ section{
   font-weight: 300;
   font-size: 1.3rem;
   letter-spacing: 2px;
+  transition: .3s;
+}
+
+.tabTitle:hover{
+  background-color: rgba(255, 255, 255, 0.692);
+  color: #617D98;
+}
+
+.tabTitle.active{
+  background-color: #fff;
 }
 
 .text{
