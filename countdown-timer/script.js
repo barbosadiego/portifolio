@@ -8,7 +8,7 @@ let tempYear = tempDate.getFullYear()
 let tempMonth = tempDate.getMonth()
 let tempDay = tempDate.getDate()
 
-const eventDate = new Date(tempYear, tempMonth, tempDay + 73, 11,30);
+const eventDate = new Date(tempYear, tempMonth, tempDay + 10, 11,30);
 
 let eventWeekDay = daysArray[eventDate.getDay()];
 let eventMonhtDay = eventDate.getDate();
