@@ -22,7 +22,7 @@ nav{
   right: 1.8rem;
   cursor: pointer;
   display: block;
-  color: #333;
+  color: #49A6E9;
 }
 
 .hamburguer::before,
@@ -46,9 +46,9 @@ nav{
   transform: translateX(-100%);
 }
 
-@media screen and (min-width:650px) {
+@media screen and (min-width:750px) {
   .nav-items{
-    width: 40vw;
+    width: 30vw;
   }
 }
 
@@ -105,10 +105,17 @@ nav{
 .socials{
   display: flex;
   justify-content: center;
+  align-items: center;
   gap: 1rem;
 }
 
 .socials li{
-  font-size: 2rem;
+  font-size: 1.5rem;
   color: #49A6E9;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.socials li:hover{
+  transform: scale(1.3);
 }
