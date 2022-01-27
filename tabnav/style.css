@@ -105,9 +105,9 @@ section{
   line-height: 1.5;
 }
 
-@media screen and (min-width:700px) {
+@media screen and (min-width:1000px) {
   main{
-    max-width: 90vw;
+    max-width: 70vw;
     margin: 0 auto;
   }
   section{
