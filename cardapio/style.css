@@ -112,6 +112,7 @@ section{
 .card__info-title{
   letter-spacing: 2px;
   font-size: 1rem;
+  text-transform: capitalize;
 }
 
 .card__info-price{
