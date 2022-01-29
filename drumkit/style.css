@@ -1,10 +1,10 @@
-*{
+* {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
 
-body{
+body {
   height: 100vh;
   width: 100vw;
   font-family: Arial, Helvetica, sans-serif;
@@ -19,21 +19,22 @@ body{
   grid-template-rows: 1fr;
   background-blend-mode: multiply;
   color: #ffcc00;
+  user-select: none;
 }
 
-section{
+section {
   padding: 15vh 0 5vh;
 }
 
-h1{
+h1 {
   font-size: calc(2rem + 6vw);
   text-transform: uppercase;
   font-weight: 500;
-  text-shadow: 0 0 10px rgb(0, 0, 0, .5);
+  text-shadow: 0 0 10px rgb(0, 0, 0, 0.5);
   text-align: center;
 }
 
-.sound-container{
+.sound-container {
   padding: 5rem 0 0 0;
   display: flex;
   justify-content: center;
@@ -41,7 +42,7 @@ h1{
   gap: 1rem;
 }
 
-.key{
+.key {
   height: 100px;
   width: 100px;
   border: 4px solid #ffcc00;
@@ -52,4 +53,10 @@ h1{
   color: white;
   text-transform: uppercase;
   cursor: pointer;
+  transition: transform 0.1s;
+}
+
+.key.active {
+  transform: scale(1.3);
+  box-shadow: 0 0 50px #ffcc00;
 }
