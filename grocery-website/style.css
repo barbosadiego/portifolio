@@ -268,6 +268,10 @@ header{
 
 /* section category */
 
+#category{
+  background-color: rgba(0, 0, 0, 0.041);
+}
+
 #category h1{
   margin-bottom: 1rem;
 }
@@ -287,6 +291,7 @@ header{
   align-items: center;
   gap: .5rem;
   border-radius: 5px;
+  background-color: white;
 }
 
 .card-info p{
@@ -434,6 +439,7 @@ header{
   display: flex;
   align-items: center;
   flex-direction: column;
+  border: 1px solid var(--black);
 }
 
 .timer p{
@@ -448,10 +454,13 @@ header{
   color: white;
   display: block;
   width: 100%;
+  text-align: center;
+  border: 1px solid var(--black);
 }
 
 #deal .btn{
   width: 80%;
+  text-align: center;
 }
 
 /* section contact */
@@ -610,6 +619,9 @@ footer .links a{
   #product .product__card{
     flex: 1 1 20rem;
   }
+  #contact form button{
+    width: 30%;
+  }
   footer{
     flex-direction: row;
     flex-wrap: wrap;
@@ -620,3 +632,77 @@ footer .links a{
   }
 }
 
+@media screen and (min-width:1024px) {
+  section, footer, .layer1, .layer2{
+    padding-left: calc(20px + 20%);
+    padding-right: calc(20px + 20%);
+  }
+  header button{
+    display: none;
+  }
+  .layer1{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .layer2{
+    display: flex;
+    align-items: center;
+  }
+  .layer2 nav{
+    position: static;
+    display: initial;
+    background-color: initial;
+    width: 0;
+    top: 0;
+    left: 0;
+    padding: 0;
+  }
+  .layer2 nav ul{
+    display: flex;
+    align-items: center;
+  }
+  .layer2 nav ul li+li{
+    margin-top: 0;
+  }
+  .layer2 nav ul li{
+    margin-right: 20px;
+    padding: 0;
+  }
+  #home .home__intro{
+    text-align: left;
+    align-items: flex-start;
+  }
+  .offer div{
+    width: 100%;
+  }
+  .offer .btn{
+    width: auto;
+  }
+  .product__card{
+    flex: 1 1 30rem;
+  }
+  #deal{
+    align-items: flex-start;
+    text-align: left;
+    height: 500px;
+    justify-content: center;
+    gap: 2rem;
+    font-size: 1.4rem;
+  }
+  #deal .timer div{
+    height: 6rem;
+    width: 6rem;
+  }
+  #deal > *{
+    max-width: 30%;
+  }
+  #deal .btn{
+    width: auto;
+  }
+  #contact form .input-box{
+    display: flex;
+    gap: 1rem;
+  }
+  
+}
