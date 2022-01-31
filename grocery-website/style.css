@@ -236,6 +236,11 @@ header{
   overflow: hidden;
 }
 
+.offer > div img{
+  width: 100%;
+  object-fit: cover;
+}
+
 .offer .offer-box{
   position: absolute;
   padding: 1rem;
@@ -263,7 +268,11 @@ header{
 
 /* section category */
 
-#category {
+#category h1{
+  margin-bottom: 1rem;
+}
+
+#category .content{
   display: flex;
   flex-direction: column;
   gap: 1rem;
@@ -297,8 +306,10 @@ header{
   gap: 1rem;
 }
 
-#product span{
-  color: var(--black);
+#product .content{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 
 .product__card{
@@ -308,6 +319,7 @@ header{
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-between;
   gap: .5rem;
   padding: 1rem 0;
   overflow: hidden;
@@ -496,7 +508,6 @@ header{
 
 .banner div{
   border: 10px solid rgba(0, 0, 0, 0.1);
-  width: 90%;
   display: flex;
 }
 
@@ -532,6 +543,10 @@ footer{
   font-size: 1rem;
 }
 
+footer h3{
+  text-align: left;
+}
+
 footer .logo{
   justify-content: flex-start;
 }
@@ -554,12 +569,13 @@ footer .socials i:hover{
 }
 
 footer .info p{
-  font-size: .9rem;
+  font-size: .8rem;
 }
 
 footer > div{
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   gap: 1rem;
 }
 
@@ -567,3 +583,40 @@ footer .links a{
   text-transform: capitalize;
   color: var(--black);
 }
+
+@media screen and (min-width:768px) {
+  #home{
+    flex-direction: row;
+  }
+  #home > div{
+    flex: 1;
+  }
+  .offer{
+    flex-direction: row;
+    height: 250px;
+
+  }
+  #category .content{
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  #category .content > div{
+    flex: 1 1 20rem;
+  }
+  #product .content{
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  #product .product__card{
+    flex: 1 1 20rem;
+  }
+  footer{
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  footer > div{
+    flex: 1;
+    height: 100%;
+  }
+}
+
