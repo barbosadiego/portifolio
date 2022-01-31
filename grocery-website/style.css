@@ -8,12 +8,147 @@
   text-decoration: none;
 }
 
-body{
-  font-family: 'Nunito', sans-serif;
+
+:root{
+  --black: #2c2c54;
+  --green: #27ae60;
+
+  --fs-h1: 2.75rem;
+  --fs-h2: 2rem;
+  --fs-h3: 1.75rem
 }
 
+::selection{
+  background-color: var(--green);
+  color: white;
+}
+
+body{
+  font-family: 'Nunito', sans-serif;
+  font-size: 62.5%;
+}
+
+h1{
+  font-size: var(--fs-h1);
+}
+
+h2{
+  font-size: var(--fs-h2);
+}
 
 img{
   display: block;
   max-width: 100%;
 }
+
+/* header */
+
+header{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.layer1{
+  padding: 20px;
+  background-color: #f1f2f6;
+  width: 100%;
+}
+
+.logo{
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: .5rem;
+}
+
+.logo i{
+  color: var(--green);
+  font-size: var(--fs-h3);
+}
+
+.logo h2{
+  text-transform: capitalize;
+}
+
+.search{
+  display: flex;
+  justify-content: center;
+}
+
+.search input{
+  width: 90%;
+  height: 2rem;
+  border: 2px solid rgba(0, 0, 0, 0.2);
+  outline: none;
+  padding: .5rem 1rem;
+  font-family: inherit;
+}
+
+.search-btn{
+  width: 3rem;
+  background-color: var(--green);
+  border: none;
+  color: white;
+  margin-left: -2px;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.layer2{
+  width: 100%;
+  padding: 0 20px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+.layer2 button{
+  padding: .5rem .8rem;
+  font-size: 1.2rem;
+  background-color: transparent;
+  border: 2px solid var(--black);
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.layer2 nav{
+  position: absolute;
+  top: 60px;
+  left: 0;
+  background-color: var(--black);
+  width: 100%;
+  padding: 20px;
+  display: none;
+}
+
+.layer2 .nav__icons{
+  font-size: 1.3rem;
+}
+
+.layer2 .nav__icons i{
+  padding-left: 10px;
+}
+
+.layer2 nav li{
+  background-color: white;
+  padding: .5rem 1rem;
+  text-align: center;
+}
+
+.layer2 nav li + li{
+  margin-top: 10px;
+}
+
+.layer2 li a{
+  font-size: 1.2rem;
+  text-transform: capitalize;
+  color: var(--black);
+}
+
+/* section home */
+
