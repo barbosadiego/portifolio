@@ -1,6 +1,141 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
 
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+
+body{
+  font-family: 'Poppins', sans-serif;
+}
+
+::selection{
+  background-color: red;
+  color: white;
+}
+
+section{
+  padding: 20px;
+}
+
 img{
   display: block;
   max-width: 100%;
+}
+
+.bg-hero{
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  background-image: url(img/hero.jpg);
+  background-position-x: 20%;
+  background-position-y: 20%;
+  background-size: cover;
+  z-index: -1;
+}
+
+header{
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+
+.logo{
+  font-size: 1.5em;
+  color: white;
+  font-weight: 600;
+}
+
+nav{
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 100vh;
+  background-color: whitesmoke;
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+  transform: translateX(100%);
+  transition: transform .3s ease;
+}
+
+nav.show{
+  transform: translateX(0);
+}
+
+nav ul{
+  display: flex;
+  flex-direction: column;
+}
+
+nav ul a{
+  display: block;
+  width: 100%;
+  padding: .5em 1em;
+  cursor: pointer;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  color: black;
+}
+
+nav ul a:hover{
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.close{
+  align-self: flex-end;
+  margin-right: 20px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+.hero{
+  height: 90vh;
+}
+
+.info{
+  padding: 5em 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+}
+
+.hero h1{
+  font-size: 2.5em;
+  color: white;
+  line-height: 1.2;
+  padding: 1em 0;
+}
+
+.hero p{
+  color: white;
+  font-size: 1.2em;
+}
+
+.info img{
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.arrow{
+  position: absolute;
+  bottom: 20px;
+  animation: movedown 1s alternate-reverse infinite;
+}
+
+@keyframes movedown{
+  from{
+    transform: translateY(-30px);
+  }
+  to{
+    transform: translateY(0);
+  }
 }
