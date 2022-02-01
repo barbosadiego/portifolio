@@ -131,11 +131,102 @@ nav ul a:hover{
   animation: movedown 1s alternate-reverse infinite;
 }
 
+.arrow path{
+  fill: white;
+}
+
 @keyframes movedown{
   from{
-    transform: translateY(-30px);
+    transform: translateY(-20px);
   }
   to{
     transform: translateY(0);
+  }
+}
+
+@media screen and (min-width:768px) {
+  .arrow{
+    position: unset;
+  }
+  .arrow path{
+    fill: black;
+  }
+  .hero{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 50%;
+    height: 40vh;
+  }
+  .menu, .close{
+    display: none;
+  }
+  .logo{
+    color: black;
+  }
+  .logo span{
+    color: red;
+  }
+  nav{
+    position: unset;
+    transform: translateX(0);
+    height: 0;
+  }
+  nav ul{
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  nav li a{
+    font-size: 1.1rem;
+    color: white;
+  }
+  .hero h1, .hero p{
+    color: #000;
+  }
+  .bg-hero{
+    height: 50%;
+    width: 50%;
+    left: 50%;
+  }
+  .info{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+  }
+  .info h1{
+    text-transform: capitalize;
+    letter-spacing: 1px;
+  }
+  .info img{
+    width: 50%;
+  }
+  .info div{
+    grid-column: 1/-1;
+    display: flex;
+    padding: 20px;
+  }
+  .info div > div{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-evenly;
+    text-align: right;
+    gap: 1em;
+  }
+  .info .invert{
+    flex-direction: row-reverse;
+  }
+  .info .invert div{
+    align-items: flex-start;
+    justify-content: space-evenly;
+    text-align: left;
+  }
+}
+
+@media screen and (min-width:1024px) {
+  .wrapper{
+    width: 1170px;
+    margin: 0 auto;
   }
 }
