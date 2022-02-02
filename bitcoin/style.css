@@ -48,7 +48,9 @@ header{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: var(--margin-md) 0
+  padding: var(--margin-md) 0;
+  position: relative;
+  z-index: 10;
 }
 
 .logo{
@@ -58,7 +60,34 @@ header{
 }
 
 nav{
-  display: none;
+  display: fixed;
+  position: absolute;
+  top: 100px;
+  width: 100%;
+  background-color: white;
+  transform: translateY(-100%);
+  opacity: 0;
+}
+
+nav ul li{
+  border-bottom: 1px solid var(--darkPink);
+}
+
+nav ul li:last-child{
+  border-bottom: none;
+}
+
+nav a{
+  display: block;
+  color: var(--darkPink);
+  text-transform: capitalize;
+  padding: var(--padding-sm) 0;
+  font-size: 1.3rem;
+}
+
+nav.show{
+  transform: translateY(0);
+  opacity: 1;
 }
 
 .hamburguer{
@@ -433,7 +462,12 @@ footer .social > div{
   }
   nav{
     display: flex;
+    justify-content: flex-end;
     text-transform: capitalize;
+    opacity: 1;
+    position: initial;
+    background-color: unset;
+    transform: translateY(0);
   }
   nav a{
     color: black;
@@ -454,7 +488,11 @@ footer .social > div{
   }
   nav ul{
     display: flex;
+    align-items: center;
     gap: 1rem;
+  }
+  nav ul li{
+    border-bottom: none;
   }
   .intro{
     display: grid;
