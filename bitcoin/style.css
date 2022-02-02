@@ -1,0 +1,400 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+
+:root{
+  --margin-xl: 4rem;
+  --margin-lg: 3rem;
+  --margin-md: 2rem;
+  --margin-sm: 1rem;
+  --margin-xs: 0.8rem;
+  --margin-xxs: 0.5rem;
+
+  --padding-xl: 4rem;
+  --padding-lg: 3rem;
+  --padding-md: 2rem;
+  --padding-sm: 1rem;
+  --padding-xs: 0.8rem;
+  --padding-xxs: 0.5rem;
+
+  --darkPink: rgb(223, 51, 163);
+  --lightPink: rgb(255, 234, 249);
+  --color-buttonHover: rgb(255, 85, 113);
+}
+
+img{
+  display: block;
+  max-width: 100%;
+}
+
+
+body{
+  font-family: 'Poppins', sans-serif;
+  padding-left: var(--margin-sm);
+  padding-right: var(--margin-sm);
+}
+
+section{
+  padding: var(--padding-md) 0;
+}
+
+/* header */
+
+header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--margin-md) 0
+}
+
+.logo{
+  color: #333;
+  text-transform: uppercase;
+  font-size: 1.3rem;
+}
+
+nav{
+  display: none;
+}
+
+.hamburguer{
+  position: relative;
+  padding: 1rem;
+  cursor: pointer;
+}
+
+.hamburguer::before{
+  position: absolute;
+  content: '';
+  width: 1.5rem;
+  height: 3px;
+  background: var(--darkPink);
+  transform: translateY(-9px);
+  transition: .3s ease-in-out;
+}
+
+.hamburguer::after{
+  position: absolute;
+  content: '';
+  width: 1.5rem;
+  height: 3px;
+  background: var(--darkPink);
+  transform: translateY(6px);
+  transition: .3s ease-in-out;
+}
+
+.hamburguer .line{
+  width: 1.5rem;
+  height: 3px;
+  background: var(--darkPink);
+}
+
+.hamburguer.active .line{
+  opacity: 0;
+}
+
+.hamburguer.active::before{
+  transform: rotateZ(45deg) translateX(2px);
+}
+
+.hamburguer.active::after{
+  transform: rotateZ(-45deg) translateX(2px);
+}
+
+/* section intro */
+
+.intro{
+  background-image: url(pics/header.svg);
+  background-size: cover;
+  background-position: center;
+  background-color: rgba(255, 255, 255, 0.90);
+  background-blend-mode: overlay;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.text{
+  text-align: center;
+}
+
+h1{
+  font-size: 2rem;
+  line-height: 1.2;
+}
+
+.intro p{
+  padding: var(--margin-sm) 0;
+}
+
+.intro button{
+  background-color: var(--darkPink);
+  padding: .5rem 1rem;
+  border: none;
+  color: white;
+  font-family: inherit;
+  font-size: 1rem;
+  text-transform: capitalize;
+  border-radius: 5px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.intro button:hover{
+  background-color: var(--color-buttonHover);
+}
+
+/* section why */
+
+.why{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--margin-sm);
+}
+
+.why h2{
+  line-height: 1.1;
+}
+
+.why p{
+  padding: var(--padding-sm) 0;
+  font-size: .9rem;
+  color: #666;
+}
+
+.why img{
+  width: 80px;
+}
+
+.why .card{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: var(--padding-sm);
+}
+
+.why div:last-of-type{
+  background-color: rgba(255, 234, 249, 0.3);
+}
+
+/* section testemonial */
+
+.testemonial{
+  position: relative;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--padding-sm);
+}
+
+.testemonial p{
+  font-size: .9rem;
+  line-height: 1.3;
+}
+
+.testemonial .img{
+  opacity: .09;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 20rem;
+  width: 20rem;
+}
+
+.testemonial::before{
+  width: 15rem;
+  height: 15rem;
+  position: absolute;
+  content: '';
+  bottom: calc(-1 * (10rem / 2));
+  left: calc(-1 * (15rem / 2));
+  border-radius: 50%;
+  background-color: var(--lightPink);
+  opacity: .4;
+  z-index: -1;
+}
+
+.person{
+  display: flex;
+  align-items: center;
+  gap: var(--padding-sm);
+}
+
+.person .info .name{
+  font-weight: bold;
+}
+
+.person img{
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+/* section buy */
+
+.buy img{
+  width: 80px;
+  height: 80px;
+}
+
+.buy h2{
+  text-transform: capitalize;
+}
+
+.buy{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--padding-md);
+  text-align: center;
+}
+
+.buy .card{
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  padding: var(--padding-sm);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--padding-sm);
+  border-radius: 10px;
+}
+
+.buy button{
+  padding: .5rem 1rem;
+  background-color: transparent;
+  border: 2px solid var(--darkPink);
+  border-radius: 5px;
+  color: var(--darkPink);
+  text-transform: capitalize;
+  font-family: inherit;
+}
+
+/* section payment */
+
+.payment img{
+  width: 80px;
+}
+
+.payment h2{
+  text-transform: capitalize;
+}
+
+.payment p{
+  font-size: .9rem;
+  padding-bottom: var(--padding-sm);
+}
+
+.payment{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--padding-md);
+  text-align: center;
+  position: relative;
+  overflow-x: hidden;
+
+}
+
+.payment .card{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--padding-sm);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  padding: var(--margin-sm);
+  border-radius: 10px;
+}
+
+.payment .background{
+  transform: rotateZ(-45deg) scale(2.5);
+  position: absolute;
+  top: 10rem;
+  right: -10px;
+  opacity: .07;
+}
+
+/* section subscribe */
+
+.subscribe{
+  background-color: var(--lightPink);
+  padding: var(--padding-md);
+}
+
+.subscribe p{
+  font-size: .9rem;
+  padding: var(--padding-sm) 0;
+  color: #666;
+}
+
+.subscribe input{
+  display: block;
+  width: 100%;
+  border: 2px solid var(--darkPink);
+  height: 2rem;
+  outline: none;
+  padding: .5rem;
+}
+
+.subscribe button{
+  height: 2rem;
+  width: 100%;
+  margin-top: var(--padding-sm);
+  border: none;
+  background-color: var(--darkPink);
+  font-family: inherit;
+  color: white;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  text-transform: capitalize;
+}
+
+/* footer */
+
+footer img{
+  width: 50px;
+  height: 50px;
+  background-color: var(--darkPink);
+  padding: .5rem;
+  /* border-radius: 50%; */
+}
+
+footer{
+  display: flex;
+  flex-direction: column;
+  padding-top: var(--margin-md);
+  text-align: center;
+  gap: var(--margin-md);
+  font-size: 1rem;
+  text-transform: capitalize;
+}
+
+footer h3{
+  margin-bottom: var(--margin-sm);
+}
+
+footer h3:last-of-type{
+  margin-bottom: 0;
+}
+
+footer > div{
+  display: flex;
+  flex-direction: column;
+  gap: var(--margin-sm);
+}
+
+footer .social > div{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
