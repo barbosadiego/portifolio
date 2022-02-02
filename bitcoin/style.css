@@ -131,6 +131,10 @@ h1{
   padding: var(--margin-sm) 0;
 }
 
+.intro img{
+  display: none;
+}
+
 .intro button{
   background-color: var(--darkPink);
   padding: .5rem 1rem;
@@ -258,6 +262,13 @@ h1{
   text-align: center;
 }
 
+.buy > div{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: var(--margin-md);
+}
+
 .buy .card{
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
   width: 100%;
@@ -277,6 +288,14 @@ h1{
   color: var(--darkPink);
   text-transform: capitalize;
   font-family: inherit;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.buy button:hover{
+  background-color: var(--color-buttonHover);
+  color: white;
+  border-color: var(--color-buttonHover);
 }
 
 /* section payment */
@@ -302,7 +321,12 @@ h1{
   text-align: center;
   position: relative;
   overflow-x: hidden;
+}
 
+.payment .cards{
+  display: flex;
+  flex-direction: column;
+  gap: var(--padding-md);
 }
 
 .payment .card{
@@ -397,4 +421,121 @@ footer .social > div{
   align-items: center;
   justify-content: center;
   gap: 1rem;
+}
+
+@media screen and (min-width:768px) {
+  .wrapper{
+    max-width: 1170px;
+    margin: 0 auto;
+  }
+  .hamburguer{
+    display: none;
+  }
+  nav{
+    display: flex;
+    text-transform: capitalize;
+  }
+  nav a{
+    color: black;
+  }
+  nav a:hover{
+    color: #666;
+  }
+  nav .special{
+    color: var(--darkPink);
+    border: 1px solid var(--darkPink);
+    padding: .5rem 1rem;
+    border-radius: 5px;
+    transition: .3s;
+  }
+  nav .special:hover{
+    background-color: var(--color-buttonHover);
+    color: white;
+  }
+  nav ul{
+    display: flex;
+    gap: 1rem;
+  }
+  .intro{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    background-image: none;
+    /* place-items: center; */
+  }
+  .intro img{
+    display: unset;
+    grid-column: 2/3;
+    grid-row: 1/3;
+    gap: 1rem;
+  }
+  .intro .text{
+    text-align: left;
+  }
+  .intro h1{
+    font-size: calc(2rem + 1vw);
+  }
+  .intro .text p{
+    padding: var(--margin-md) 0;
+  }
+  .intro button{
+    grid-column: 1/2;
+  }
+  .intro button{
+    justify-self: flex-start;
+  }
+  .why .text{
+    max-width: 500px;
+  }
+  .cards{
+    display: flex;
+    gap: 2rem;
+  }
+  .cards img{
+    width: 3.2rem;
+    height: 4rem;
+  }
+  .cards .card{
+    flex: 1;
+    justify-content: space-around;
+  }
+  .why div:last-of-type {
+    background-color: white;
+  }
+  .testemonial{
+    max-width: 700px;
+    margin: 0 auto;
+  }
+  .buy > div{
+    flex-direction: row;
+  }
+  .payment .cards{
+    flex-direction: row;
+  }
+  .subscribe{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+  }
+  .subscribe div{
+    grid-column: 2/3;
+  }
+  footer .links{
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  footer .links > div{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  footer .img{
+    cursor: pointer;
+    transition: .3s;
+  }
+  footer .img:hover{
+    transform: scale(1.5);
+  }
+  footer .img img{
+    height: 30px;
+    width: 30px;
+  }
 }
