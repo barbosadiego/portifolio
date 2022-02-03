@@ -1,5 +1,370 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;400;500;600;700;900&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+
+:root{
+  --dark1: #111111;
+  --dark2: #555555;
+  --dark3: #777777;
+  --dark4: #999999;
+  --light1: #fff;
+  --light2: #eee;
+  --light3: #ccc;
+  --orange: #FF8139;
+  --pink: #FF3998;
+  --green: #39FFA0;
+  --red: #FF3939;
+  --light-green: #EDFFF6;
+  --light-orange: #FFF0E8;
+}
 
 body{
   font-family: 'Inter', sans-serif;
+}
+
+h1{
+  font-size: 48px;
+  font-weight: 900;
+  line-height: 58px;
+}
+
+h2{
+  font-size: 40px;
+  font-weight: 500;
+  line-height: 45px;
+}
+
+p{
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 30px;
+  color: var(--dark3);
+}
+
+header, section, footer{
+  padding: 50px 20px;
+}
+
+.btn{
+  background: linear-gradient(45deg, var(--pink), var(--red) ,var(--orange), gold);
+  padding: 3px;
+  border-radius: 50px;
+  width: 164px;
+}
+
+button{
+  width: 158px;
+  height: 55px;
+  background-color: white;
+  font-size: 20px;
+  line-height: 30px;
+  font-family: inherit;
+  text-transform: capitalize;
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
+  transition: .3s;
+}
+
+button:hover{
+  background-color: transparent;
+  color: white;
+}
+
+/* navigation */
+
+header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav{
+  display: none;
+}
+
+.close-btn{
+  cursor: pointer;
+  padding: 10px;
+}
+
+/* hero */
+
+.hero{
+  position: relative;
+}
+
+.hero .content{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 75%;
+}
+
+.hero .graph{
+  background-image: url(images/graphic.png);
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 214px;
+  height: 413px;
+  z-index: -1;
+}
+
+.hero span{
+  text-transform: uppercase;
+  color: var(--pink);
+  font-weight: 700;
+}
+
+/* section upsell */
+
+.upsell{
+  background: linear-gradient(90deg, var(--pink), var(--red), var(--orange));
+  background-color: rgba(255, 255, 255, 0.315);
+  background-blend-mode: overlay;
+  position: relative;
+  height: 370px;
+}
+
+.upsell .content{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+}
+
+.upsell p{
+  color: var(--dark1);
+}
+
+.upsell .img{
+  position: absolute;
+  right: 30px;
+  top: -30px;
+}
+
+/* section press */
+
+.press .imgs{
+  display: grid;
+  grid-template-columns: repeat(2,50%);
+  gap: 10px;
+  align-items: center;
+}
+
+/* section showcase */
+
+.showcase{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.nft-cards{
+  display: flex;
+  overflow-x: auto;
+  gap: 20px;
+  padding: 20px 3px;
+}
+
+.nft-cards .card{
+  width: 290px;
+  height: 400px;
+  background-color: var(--light2);
+  border-radius: 16px;
+}
+
+.nft-cards .info{
+  display: grid;
+  gap: 8px;
+  grid-template-columns: repeat(2,1fr);
+  padding: 20px;
+}
+
+.nft-cards .info h4{
+  font-size: 20px;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+.nft-cards .info .orange{
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--orange);
+  text-transform: uppercase;
+}
+
+.nft-cards .info .number{
+  font-size: 18px;
+  color: var(--dark3);
+}
+
+.nft-cards .info .grey{
+  font-size: 12px;
+  text-transform: uppercase;
+  text-align: right;
+  align-self: flex-end;
+}
+
+.nft-cards .info .price{
+  font-size: 20px;
+  text-align: right;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 8px;
+}
+
+.nft-cards .info .time{
+  font-size: 18px;
+  text-align: right;
+}
+
+/* section #5 */
+
+.section-5{
+  background: linear-gradient(45deg, var(--light-orange) 50%, var(--pink));
+  background-color: rgba(255, 255, 255, 0.377);
+  background-blend-mode: overlay;
+  overflow-x: hidden;
+}
+
+.section-5 .img img{
+  transform: translateX(10%);
+}
+
+.section-5 .content{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-top: 20px;
+}
+
+.section-5 .content a{
+  color: var(--pink);
+  font-size: 20px;
+}
+
+/* section #6 */
+
+.section-6{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  background: linear-gradient(45deg, var(--light-green) 70%, var(--orange));
+  background-color: rgba(255, 255, 255, 0.377);
+  background-blend-mode: overlay;
+}
+
+.section-6 .content{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.section-6 .content a{
+  color: var(--pink);
+  font-size: 20px;
+}
+
+/* section #7 */
+
+.section-7{
+  background-color: #eee;
+}
+
+.section-7 .content{
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.section-7 .card{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* footer upsell */
+
+.footer-upsell{
+  position: relative;
+  border-bottom: 1px solid rgba(187, 187, 187, 0.342);
+}
+
+.footer-upsell .content{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 60%;
+}
+
+.footer-upsell span{
+  font-size: 16px;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--pink);
+}
+
+.footer-upsell .img{
+  background-image: url(images/person-mobile.png);
+  height: 466px;
+  width: 175px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+}
+
+/* footer */
+
+footer{
+  color: var(--dark2);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+footer a{
+  color: var(--dark2);
+  font-size: 20px;
+  margin-bottom: 18px;
+  display: block;
+}
+
+footer .info{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+footer .social{
+  display: flex;
+  gap: 20px;
+  font-size: 18px;
+}
+
+footer .links{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 20px;
+}
+
+footer .links h3{
+  font-size: 20px;
+  text-transform: capitalize;
+  margin-bottom: 20px;
+}
+
+footer p{
+  font-size: 20px;
+  color: var(--dark4);
 }
