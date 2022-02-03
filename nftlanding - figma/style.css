@@ -47,7 +47,11 @@ p{
   color: var(--dark3);
 }
 
-header, section, footer{
+header{
+  padding: 20px 20px 10px;
+}
+
+section, footer{
   padding: 50px 20px;
 }
 
@@ -83,10 +87,39 @@ header{
   display: flex;
   align-items: center;
   justify-content: space-between;
+  position: relative;
+  z-index: 10;
 }
 
 nav{
+  position: absolute;
+  top: 76px;
+  left: 0;
+  background-color: white;
+  z-index: -1;
+  width: 100%;
+  padding: 20px;
+  /* transform: translateY(-400px); */
+  transition: transform .3s;
   display: none;
+}
+
+nav.show{
+  transform: translateY(0);
+  z-index: 1;
+  display: initial;
+}
+
+nav a{
+  color: var(--dark2);
+  font-size: 20px;
+  text-transform: capitalize;
+  display: block;
+  padding: 20px;
+}
+
+nav ul li:last-child a{
+  color: var(--pink);
 }
 
 .close-btn{
