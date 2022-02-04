@@ -1,0 +1,72 @@
+.section-6 .container{
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.section-6 .card{
+  padding: 50px;
+  background-color: var(--green);
+  border-top-left-radius: 50px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 50px;
+  border-bottom-left-radius: 10px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+.section-6 .text{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.section-6 h3{
+  font-size: 1.25rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: var(--green);
+}
+.section-6 .person{
+  text-align: center;
+}
+.section-6 .person .name{
+  color: var(--light-yellow);
+  font-weight: 800;
+}
+.section-6 .testimonial{
+  font-weight: 300;
+  position: relative;
+}
+.section-6 .testimonial::after{
+  content: '';
+  display: block;
+  height: 34px;
+  width: 42px;
+  background-image: url(../images/icons/bxs-quote-left.svg.png);
+  position: absolute;
+  top: -50px;
+  left: -20px;
+}
+.section-6 .testimonial::before{
+  content: '6/12/2021';
+  position: absolute;
+  top: -230px;
+  right: -20px;
+  font-size: 1rem;
+  font-weight: 600;
+}
+.dots-container{
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+.dot{
+  height: 8px;
+  width: 8px;
+  background-color: rgba(30, 111, 92, 0.5);
+  border-radius: 50%;
+}
+.dot.active{
+  background-color: var(--green);
+}
