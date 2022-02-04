@@ -1,0 +1,15 @@
+.section-1{
+  background-color: var(--green);
+  border-radius: 20px;
+}
+.section-1 h1, .section-1 p{
+  color: var(--light-yellow);
+  margin-bottom: 20px;
+}
+.section-1 p{
+  font-weight: 300;
+}
+.section-1 .buttons{
+  display: flex;
+  gap: 10px;
+}

@@ -6,8 +6,8 @@
 @import url(header.css);
 
 
-
-
+/* section 1 style */
+@import url(section1.css);
 
 
 /* general styles */
@@ -24,7 +24,7 @@
   --yellow:#E6DD3B;
   --light-yellow:#ECE7B4;
 
-  --h1: 3.125rem;
+  --h1: 3.05rem;
   --h2: 1.875rem;
   --p: 1.25rem;
   --span: 1rem;
@@ -50,6 +50,7 @@ img{
 h1{
   font-size: var(--h1);
   line-height: 61px;
+  font-weight: 800;
 }
 
 h2{
@@ -65,4 +66,26 @@ p{
 span{
   font-size: var(--span);
   line-height: 20px;
+}
+
+.btn, .btn .fill{
+  width: 166px;
+  height: 54px;
+  border: 2px solid var(--yellow);
+  border-radius: 10px;
+  display: grid;
+  place-items: center;
+  font-size: 1.125rem;
+  font-weight: 600;
+  text-transform: capitalize;
+  cursor: pointer;
+}
+
+.btn{
+  color: var(--yellow);
+}
+
+.btn.fill{
+  background-color: var(--yellow);
+  color: var(--green);
 }
