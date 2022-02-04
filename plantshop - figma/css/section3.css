@@ -1,0 +1,42 @@
+.section-3 .container{
+  padding: 0 20px 60px;
+}
+.section-3 span{
+  color: var(--green);
+  display: block;
+  font-weight: 800;
+  font-size: 1.24rem;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+.section-3 h2{
+  margin-bottom: 20px;
+}
+.section-3 .images img{
+  transition: .3s ease;
+  cursor: pointer;
+}
+.section-3 .images > div{
+  position: relative;
+}
+.section-3 .images div p{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  background-color: var(--green);
+  color: var(--light-yellow);
+  opacity: .4;
+  height:95%;
+  width:95%;
+  border-radius: 20px;
+  display: grid;
+  place-items: center;
+  font-size: 2rem;
+  font-weight: 800;
+}
+.section-3 .images img:hover{
+  filter: blur(5px);
+  opacity: .1;
+}
