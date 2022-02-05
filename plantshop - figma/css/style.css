@@ -49,6 +49,10 @@
   --span: 1rem;
 }
 
+html{
+  scroll-behavior: smooth;
+}
+
 body{
   font-family: 'Montserrat', sans-serif;
 }
