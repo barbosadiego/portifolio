@@ -5,12 +5,14 @@
   flex-direction: column;
   gap: 30px;
   position: relative;
+  text-align: center;
 }
 .section-1 .container > div{
   flex: 1;
 }
-.section-1 img{
+.section-1 .container img{
   position: absolute;
+  width: 330px;
 }
 .section-1 h1, .section-1 p{
   color: var(--light-yellow);
@@ -35,6 +37,7 @@
 }
 .section-1 .buttons{
   display: flex;
+  justify-content: center;
   gap: 10px;
 }
 .section-1 .dots-container{
@@ -55,6 +58,7 @@
     flex-direction: row;
     max-width: 1170px;
     padding: 20px 60px;
+    text-align: left;
   }
   .section-1 .container > div{
     display: flex;
