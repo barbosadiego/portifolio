@@ -7,6 +7,7 @@
   display: flex;
   gap: 25px;
   overflow-x: hidden;
+  margin: 0 auto;
 }
 .img-card img{
   height: 260px;
@@ -59,4 +60,21 @@
   width: 50px;
   margin-top: 30px;
   cursor: pointer;
+}
+
+/* media queries */
+
+@media screen and (min-width:1024px) {
+  .section-5 .container{
+    position: relative;
+    width: 1000px;
+  }
+  .section-5 .container p{
+    margin-bottom: 50px;
+  }
+  .section-5 .buttons{
+    position: absolute;
+    top: 50px;
+    right: 5px;
+  }
 }

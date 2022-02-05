@@ -40,3 +40,17 @@
   filter: blur(5px);
   opacity: .3;
 }
+
+/* media queries */
+
+@media screen and (min-width:768px) {
+ .section-3 .container{
+   text-align: center;
+ }
+ .section-3 h2{
+   margin-bottom: 50px;
+ }
+ .section-3 .images{
+   display: flex;
+ }
+}

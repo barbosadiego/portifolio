@@ -4,6 +4,9 @@
   align-items: center;
   position: relative;
 }
+.header-container .logo a{
+  color: var(--green);
+}
 .h-icon path{
   fill: var(--green);
 }
@@ -61,7 +64,7 @@ nav{
   width: 100%;
   background-color: var(--green);
   z-index: 10;
-  transform: translateX(-100%);
+  transform: translateX(-200%);
   transition: .3s ease;
 }
 nav.active{
@@ -89,4 +92,39 @@ nav ul li:first-of-type a{
 }
 .close-btn path{
   fill: white;
+}
+
+/* media queries */
+
+@media screen and (min-width:768px) {
+  .btn-menu, .close-btn{
+    display: none;
+  }
+  nav{
+    display: unset;
+    position: unset;
+    transform: unset;
+    height: auto;
+    width: unset;
+    background-color: unset;
+  }
+  nav ul{
+    display: flex;
+    gap: 20px;
+  }
+  nav a{
+    color: #333;
+    padding: unset;
+    margin: unset;
+    font-size: 1.135rem;
+    transition: .3s ease;
+    padding: 5px;
+  }
+  nav a:hover{
+    color: var(--green);
+    font-weight: 800;
+  }
+  nav ul li:first-of-type a {
+    margin-top: 0;
+  }
 }

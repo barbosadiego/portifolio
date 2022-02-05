@@ -36,6 +36,7 @@
   margin: 0;
   list-style: none;
   text-decoration: none;
+  box-sizing: border-box;
 }
 
 :root{
@@ -66,7 +67,7 @@ img{
   padding: 60px 20px;
 }
 
-.header-container, .footer-container{
+.header-container{
   padding: 20px;
 }
 
@@ -111,4 +112,31 @@ span{
 .btn.fill{
   background-color: var(--yellow);
   color: var(--green);
+}
+
+.dots-container{
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.dot{
+  height: 8px;
+  width: 8px;
+  background-color: rgba(30, 111, 92, 0.5);
+  border-radius: 50%;
+}
+
+.dot.active{
+  background-color: var(--green);
+}
+
+@media screen and (min-width:768px) {
+  .container, header{
+    max-width: 1170px;
+    margin: 0 auto;
+  }
+  section{
+    margin: 0 20px;
+  }
 }
