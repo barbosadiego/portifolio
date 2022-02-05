@@ -1,0 +1,52 @@
+.section-7 .container{
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.section-7 .text{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.section-7 h3{
+  font-size: 1.25rem;
+  color: var(--green);
+  text-transform: uppercase;
+}
+form{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+form input{
+  height: 65px;
+  border: rgba(30, 111, 92, 0.2);
+  outline: none;
+  background-color: rgba(30, 111, 92, 0.2);
+  border-radius: 10px;
+  padding: 0 20px;
+  font-size: 1rem;
+  font-family: inherit;
+}
+form input:focus{
+  border: 1px solid var(--yellow);
+}
+form textarea{
+  background-color: rgba(30, 111, 92, 0.2);
+  border: transparent;
+  outline: none;
+  border-radius: 10px;
+  padding: 20px;
+  font-family: inherit;
+  font-size: 1rem;
+}
+form button{
+  height: 54px;
+  background-color: var(--yellow);
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 1.125rem;
+  font-weight: 600;
+}
