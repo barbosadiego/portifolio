@@ -1,0 +1,134 @@
+.header{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid $black;
+  position: relative;
+
+  &-info{
+    display: none;
+    @include device(tablet){
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 1.5rem;
+      background-color: $blue;
+      padding: 2rem 5rem;
+      color: $white;
+    }
+    @include device(desktop-wide){
+      padding: 2rem 20%;
+    }
+
+    i{
+      margin-right: 5px;
+      color: yellow;
+    }
+  }
+
+  .logo{
+    font-size: 3rem;
+    font-weight: 600;
+    color: $black;
+    display: flex;
+    gap: 5px;
+    
+    i{
+      color: $blue;
+    }
+  }
+
+  .navbar{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem;
+    @include device(tablet){
+      padding: 2rem 5rem;
+    }
+    @include device(desktop-wide){
+      padding: 2rem 20%;
+      display: flex;
+      align-items: center;
+    }
+  }
+  
+  nav{
+    display: block;
+    position: absolute;
+    top: 65px;
+    left: 0;
+    height: 0;
+    background-color: $white;
+    z-index: 100;
+    width: 100vw;
+    border-bottom: 1px solid $black;
+    visibility: hidden;
+    overflow-y: hidden;
+    transition: .3s;
+
+    @include device(desktop){
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      overflow-y: initial;
+    }
+
+    li + li{
+      margin-top: 5px;
+      @include device(tablet){
+        margin-top: 0;
+      }
+    }
+
+    a{
+      display: block;
+      color: $black;
+      text-transform: capitalize;
+      padding: 2rem;
+      font-size: 1.8rem;
+      text-align: center;
+      @include device(tablet){
+        padding: .5rem;
+        margin-left: 10px;
+      }
+    }
+
+    &.active{
+      height: 100vh;
+      visibility: visible;
+    }
+
+    @include device(tablet){
+      display: unset;
+      position: unset;
+      height: unset;
+      visibility: visible;
+      border: none;
+
+      ul{
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+      }
+    }
+  }
+  
+  .btn-close{
+    padding: .5rem;
+    cursor: pointer;
+    font-size: 3rem;
+    transition: .3s;
+
+    &.fa-times{
+      transform: rotate(270deg);
+    }
+
+    @include device(tablet){
+      display: none;
+    }
+  }
+}

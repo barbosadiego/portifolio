@@ -20,6 +20,11 @@ $box-shadow: 0 .5rem 1rem rgba(0,0,0.1);
       @content;
     }
   }
+  @else if($size == desktop-wide){
+    @media screen and (min-width:1200px) {
+      @content;
+    }
+  }
 }
 
 @mixin title($titleSize) {
@@ -27,7 +32,6 @@ $box-shadow: 0 .5rem 1rem rgba(0,0,0.1);
   text-transform: capitalize;
   color: $black;
 }
-
 
 *{
   margin: 0;
@@ -42,29 +46,32 @@ img{
   max-width: 100%;
 }
 
-// html{
-//   font-size: 50%;
-//   @include device(tablet){
-//     font-size: 55%;
-//   }
-//   @include device(desktop){
-//     font-size: 62.5%;
-//   }
-//   scroll-behavior: smooth;
-//   scroll-padding-top: 6rem;
-// }
+html{
+  font-size: 50%;
+  @include device(tablet){
+    font-size: 55%;
+  }
+  @include device(desktop){
+    font-size: 62.5%;
+  }
+  scroll-behavior: smooth;
+  scroll-padding-top: 6rem;
+}
 
 body{
   font-family: 'Montserrat', sans-serif;
 }
 
-section, header, footer{
+section{
   padding: 2rem;
-}
 
-.wrapper{
   @include device(tablet){
-    max-width: 1170px;
-    margin: 0 auto;
+    padding: 2rem 5rem;
+  }
+  @include device(desktop){
+    padding: 2rem 10%;
+  }
+  @include device(desktop-wide){
+    padding: 2rem 20%;
   }
 }
