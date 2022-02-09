@@ -10,5 +10,10 @@ window.onscroll = () => {
   nav.classList.remove('active');
   closeBtn.classList.add('fa-bars');
   closeBtn.classList.remove('fa-times');
-  console.log('ok')
+
+  if (window.scrollY > 60){
+    document.querySelector('.header .navbar').classList.add('active');
+  } else {
+    document.querySelector('.header .navbar').classList.remove('active');
+  }
 }

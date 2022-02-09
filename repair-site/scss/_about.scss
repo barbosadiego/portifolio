@@ -1,0 +1,28 @@
+.about{
+  display: flex;
+  flex-direction: column;
+  @include device(tablet){
+    flex-direction: row-reverse;
+    align-items: center;
+  }
+
+  div{
+    flex: 1;
+  }
+
+  &-intro{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    text-align: center;
+    @include device(tablet){
+      text-align: left;
+      align-items: flex-start;
+    }
+
+    p{
+      font-size: 1.3rem;
+    }
+  }
+}

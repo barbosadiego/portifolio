@@ -52,6 +52,27 @@ img{
   padding: .8rem 2.4rem;
   font-size: 1.8rem;
   text-transform: capitalize;
+  transition: .3s;
+
+  &:hover{
+    background-color: $light-color;
+    color: $white;
+  }
+}
+
+h2{
+  font-size: 3rem;
+  text-transform: capitalize;
+}
+
+h3{
+  font-size: 2.4rem;
+  text-transform: capitalize;
+}
+
+p{
+  font-size: 1.8rem;
+  line-height: 1.4;
 }
 
 html{
