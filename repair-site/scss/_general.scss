@@ -53,6 +53,7 @@ img{
   font-size: 1.8rem;
   text-transform: capitalize;
   transition: .3s;
+  color: $black;
 
   &:hover{
     background-color: $light-color;
@@ -91,7 +92,7 @@ body{
   font-family: 'Montserrat', sans-serif;
 }
 
-section{
+section, .footer{
   padding: 4rem 2rem;
 
   @include device(tablet){

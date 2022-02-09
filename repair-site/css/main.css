@@ -18,6 +18,7 @@ img {
   font-size: 1.8rem;
   text-transform: capitalize;
   transition: 0.3s;
+  color: #334;
 }
 .btn:hover {
   background-color: #777;
@@ -59,21 +60,21 @@ body {
   font-family: "Montserrat", sans-serif;
 }
 
-section {
+section, .footer {
   padding: 4rem 2rem;
 }
 @media screen and (min-width: 768px) {
-  section {
+  section, .footer {
     padding: 2rem 5rem;
   }
 }
 @media screen and (min-width: 1024px) {
-  section {
+  section, .footer {
     padding: 2rem 10%;
   }
 }
 @media screen and (min-width: 1200px) {
-  section {
+  section, .footer {
     padding: 2rem 20%;
   }
 }
@@ -536,6 +537,157 @@ section {
   height: 56px;
   width: 56px;
   margin: 10px auto;
+}
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.contact h2 {
+  text-align: center;
+}
+.contact span {
+  color: #2597f4;
+}
+.contact .content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+@media screen and (min-width: 1024px) {
+  .contact .content {
+    flex-direction: row;
+  }
+}
+.contact .content > * {
+  flex: 1;
+}
+.contact .content iframe {
+  height: 200px;
+  width: 100%;
+}
+@media screen and (min-width: 1024px) {
+  .contact .content iframe {
+    height: auto;
+  }
+}
+.contact .content form {
+  border: 1px solid #334;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.contact .content form input, .contact .content form textarea {
+  font-family: inherit;
+  display: block;
+  width: 100%;
+  padding: 1rem;
+  outline: none;
+  transition: 0.3s;
+}
+.contact .content form input:focus, .contact .content form textarea:focus {
+  background-color: #334;
+  color: #fff;
+}
+.contact .content form input:focus::placeholder, .contact .content form textarea:focus::placeholder {
+  color: #fff;
+}
+.contact .content form .submit {
+  background-color: transparent;
+  border: 1px solid #334;
+  font-family: inherit;
+  padding: 1rem;
+  cursor: pointer;
+  text-transform: capitalize;
+  transition: 0.3s;
+}
+.contact .content form .submit:hover {
+  background-color: #334;
+  color: #fff;
+}
+
+.footer {
+  background-color: #f5f5f5;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+@media screen and (min-width: 768px) {
+  .footer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (min-width: 1024px) {
+  .footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+.footer p {
+  font-size: 1.5rem;
+}
+.footer h3 {
+  font-weight: 400;
+}
+.footer span, .footer i {
+  color: #2597f4;
+}
+.footer div {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  text-transform: capitalize;
+}
+.footer div ul {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.footer div a, .footer div i {
+  font-size: 1.8rem;
+}
+.footer .links a::before {
+  content: "> ";
+}
+.footer .contact div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.footer .newsletter input {
+  padding: 1rem;
+  font-family: inherit;
+  outline: none;
+}
+.footer .newsletter .submit {
+  background-color: #fff;
+  border: 1px solid #334;
+  padding: 0.5rem;
+  font-family: inherit;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  width: 180px;
+  cursor: pointer;
+}
+.footer .social {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 3rem;
+}
+.footer .social i {
+  font-size: 3rem;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.footer .social i:hover {
+  transform: scale(1.5);
 }
 
 /*# sourceMappingURL=main.css.map */
