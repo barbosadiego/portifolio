@@ -11,6 +11,14 @@ img {
   max-width: 100%;
 }
 
+.btn {
+  display: inline-block;
+  border: 2px solid #777;
+  padding: 0.8rem 2.4rem;
+  font-size: 1.8rem;
+  text-transform: capitalize;
+}
+
 html {
   font-size: 50%;
   scroll-behavior: smooth;
@@ -146,13 +154,14 @@ section {
   color: #334;
   text-transform: capitalize;
   padding: 2rem;
-  font-size: 1.8rem;
+  font-size: 2.8rem;
   text-align: center;
 }
 @media screen and (min-width: 768px) {
   .header nav a {
     padding: 0.5rem;
     margin-left: 10px;
+    font-size: 1.8rem;
   }
 }
 .header nav.active {
@@ -186,6 +195,47 @@ section {
   .header .btn-close {
     display: none;
   }
+}
+
+.home {
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (min-width: 768px) {
+  .home {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+.home div {
+  flex: 1;
+}
+.home-intro {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+}
+@media screen and (min-width: 768px) {
+  .home-intro {
+    align-items: flex-start;
+  }
+}
+.home-intro h1 {
+  font-size: 2.4rem;
+  text-transform: capitalize;
+  color: #334;
+}
+@media screen and (min-width: 1200px) {
+  .home-intro h1 {
+    font-size: 3rem;
+    text-transform: capitalize;
+    color: #334;
+  }
+}
+.home-intro p {
+  font-size: 1.8rem;
+  line-height: 1.3;
 }
 
 /*# sourceMappingURL=main.css.map */

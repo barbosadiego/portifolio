@@ -1,0 +1,33 @@
+.home{
+  display: flex;
+  flex-direction: column;
+  @include device(tablet){
+    flex-direction: row;
+    align-items: center;
+  }
+
+  div{
+    flex: 1;
+  }
+
+  &-intro{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+    @include device(tablet){
+      align-items: flex-start
+    }
+
+    h1{
+      @include title(2.4);
+      @include device(desktop-wide){
+        @include title(3)
+      }
+    }
+    p{
+      font-size: 1.8rem;
+      line-height: 1.3;
+    }
+  }
+}
