@@ -1,0 +1,69 @@
+.reviews{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  background-color: $light-bg;
+
+  span{
+    color: $blue;
+  }
+
+  &-container{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    @include device(tablet){
+      flex-direction: row;
+    }
+  }
+
+  &-card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+    border: 1px solid $black;
+    background-color: $white;
+    padding: 2rem;
+    position: relative;
+    transition: .3s;
+
+    &:hover{
+      background-color: $black;
+
+      p{
+        color: $white;
+      }
+    }
+
+    .quote::after{
+      content: '\f10e';
+      font-size: 9rem;
+      color: rgba($color: $blue, $alpha: .2);
+      position: absolute;
+      top: 50px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    
+    .fa-star{
+      color: $blue;
+      font-size: 1.5rem;
+    }
+    
+    p{
+      line-height: 1.5;
+      color: $light-color;
+      font-size: 1.5rem;
+    }
+
+    img{
+      border-radius: 50%;
+      height: 56px;
+      width: 56px;
+      margin: 10px auto;
+    }
+  }
+}
