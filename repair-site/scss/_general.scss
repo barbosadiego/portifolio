@@ -63,7 +63,7 @@ html{
     font-size: 62.5%;
   }
   scroll-behavior: smooth;
-  scroll-padding-top: 6rem;
+  // scroll-padding-top: 2rem;
 }
 
 body{
@@ -71,7 +71,7 @@ body{
 }
 
 section{
-  padding: 2rem;
+  padding: 4rem 2rem;
 
   @include device(tablet){
     padding: 2rem 5rem;
