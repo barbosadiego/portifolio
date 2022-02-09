@@ -1,0 +1,22 @@
+.gallery{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+
+  span{
+    color: $blue;
+  }
+
+  &-items{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    @include device(tablet){
+      display: grid;
+      grid-template-columns: repeat(3,1fr);
+    }
+  }
+}
