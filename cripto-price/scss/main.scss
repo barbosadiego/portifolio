@@ -1,0 +1,65 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  height: 100vh;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #333;
+  color: whitesmoke;
+  display: flex;
+  justify-content: center;
+
+  section{
+    margin-top: 5vh;
+    max-width: 1170px;
+
+    h1{
+      font-size: 4rem;
+      margin-bottom: 50px;
+      text-align: center;
+    }
+
+    .container{
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1.6rem;
+
+      &-card{
+        border: 1px solid #00ff59;
+        padding: 50px 40px;
+        border-radius: 10px;
+        text-transform: capitalize;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        transition: .3s;
+
+        &:hover{
+          background-color: white;
+          color: #333;
+        }
+
+        &:hover span{
+          color: #333;
+        }
+
+        .symbol{
+          font-size: 2rem;
+          font-weight: bold;
+          color: #00ff59;
+        }
+
+        .buy{
+          font-size: 1.6rem;
+          color: #00ff59;
+          font-weight: 600;
+        }
+      }
+    }
+  }
+}
