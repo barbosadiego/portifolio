@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  transition: all .5s;
 }
 
 img{
@@ -17,32 +18,56 @@ body{
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  overflow: hidden;
 
   .netflix-logo {
     width: 100%;
+    height: 1vh;
     flex: 1;
     display: flex;
     justify-content: center;
     align-items: center;
+
+    img{
+      height: 100%;
+    }
   }
 
   .carousel{
-    flex: 3;
-    position: relative;
     width: 80%;
-    display: flex;
+    margin: 0 auto;
+    height: 250px;
     justify-content: space-between;
     align-items: center;
     height: 250px;
+    padding-bottom: 10px !important;
+    position: relative;
     
     &-box{
-      overflow: hidden;
+      display: flex;
+      align-items: center;
       display: flex;
       position: absolute;
+      width: 100%;
+      height: 250px;
+      overflow: hidden;
+      transform: all .3s;
+
 
       img{
+        max-width: 147px;
+        min-width: 147px;
         height: 200px;
-        margin: 0 20px;
+        background-size: cover;
+        background-color: red;
+        margin: 5px 10px;
+        cursor: pointer;
+        transition: .5s ease;
+        z-index: 10;
+
+        &:hover{
+          transform: scale(1.2);
+        }
       }
     }
 
@@ -55,16 +80,17 @@ body{
       align-items: center;
       justify-content: center;
       cursor: pointer;
+      z-index: 10;
     }
 
     .btn-left{
       position: absolute;
-      left: -20px;
+      left: -40px;
     }
 
     .btn-right{
       position: absolute;
-      right: -20px;
+      right: -40px;
     }
   }
 }
