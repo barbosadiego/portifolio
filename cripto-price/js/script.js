@@ -1,6 +1,7 @@
 const container = document.querySelector(".container");
 
 function searchPrice() {
+  container.innerHTML = '';
   fetch("https://blockchain.info/ticker")
     .then((response) => response.json())
     .then((response) =>
