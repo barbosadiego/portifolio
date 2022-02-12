@@ -1,0 +1,110 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+
+a {
+  color: white;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+body {
+  height: 100vh;
+  background-color: #252525;
+  font-family: "Roboto", sans-serif;
+  color: white;
+  display: grid;
+  grid-template-columns: 60px 1fr;
+  grid-template-rows: 60px 1fr;
+}
+
+.header {
+  grid-column: 1/3;
+  grid-row: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 60px;
+}
+.header-nav {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.header-nav .logo {
+  font-size: 2rem;
+  letter-spacing: 1px;
+  color: lightgreen;
+  width: 200px;
+}
+.header-nav .links ul {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.header-nav .links ul a {
+  text-transform: capitalize;
+}
+.header-profile {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.header-profile img {
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.header-profile .toggle {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 50px;
+  height: 25px;
+  border-radius: 20px;
+  background-color: white;
+  border: 1px solid #252525;
+}
+.header-profile .toggle i {
+  color: #252525;
+}
+.header-profile .toggle .toggle-ball {
+  background-color: #252525;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  position: absolute;
+  left: 4px;
+  cursor: pointer;
+}
+
+.sidenav {
+  grid-column: 1;
+  grid-row: 2/3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 50px;
+}
+.sidenav i {
+  font-size: 1.3rem;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.home {
+  grid-column: 2/3;
+  grid-row: 2/3;
+}
+
+/*# sourceMappingURL=style.css.map */
