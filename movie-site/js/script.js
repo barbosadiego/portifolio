@@ -16,3 +16,12 @@ arrows.forEach((arrow, index) => {
     }
   });
 });
+
+
+const items = document.querySelectorAll('.body, .header, .sidenav, .home-1, .home-2');
+const toggleBtn = document.querySelector('.toggle-ball');
+
+toggleBtn.addEventListener('click', () => {
+  items.forEach(item => item.classList.toggle('active'));
+  document.querySelector('.toggle').classList.toggle('active')
+})

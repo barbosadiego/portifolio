@@ -54,6 +54,7 @@ body{
 
     .logo{
       font-size: 2rem;
+      font-weight: bold;
       letter-spacing: 1px;
       color: lawngreen;
       width: 200px;
@@ -122,10 +123,14 @@ body{
         position: absolute;
         left: 4px;
         cursor: pointer;
+        transition: all .5s;
+      }
+
+      &.active .toggle-ball{
+        left: 25px;
       }
     }
   }
-
 }
 
 .sidenav{
@@ -137,6 +142,8 @@ body{
   justify-content: flex-start;
   gap: 50px;
   position: fixed;
+  height: 100%;
+  width: 60px;
 
   i{
     font-size: 1.3rem;
@@ -309,4 +316,42 @@ body{
   background: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,1) 50%), url(../img/f-2.jpg) no-repeat top left;
   background-size: cover;
   // height: calc(100vh - 60px);
+}
+
+// white mode
+
+body.active{
+  background-color: white;
+}
+
+.header.active{
+  background-color: white;
+  color: #000;
+
+  .logo{
+    color: red;
+    font-weight: bold;
+  }
+  
+  a{
+    color: black;
+  }
+}
+
+.sidenav.active{
+  background-color: white;
+  color: black;
+
+  i:hover{
+    color: white;
+  }
+}
+
+.home-1.active{
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(233, 227, 227, 0.322) 50%), url(../img/f-1.jpg) no-repeat top left;
+}
+
+.home-2.active{
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(233, 227, 227, 0.322) 50%), url(../img/f-2.jpg) no-repeat top left;
+  background-size: cover;
 }
