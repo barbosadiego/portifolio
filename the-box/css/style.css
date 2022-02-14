@@ -14,7 +14,12 @@ body {
 @media screen and (min-width: 768px) {
   body {
     display: grid;
-    grid-template-columns: minmax(20px, 50px) repeat(3, 1fr) minmax(20px, 50px);
+    grid-template-columns: 20px repeat(3, 1fr) 20px;
+  }
+}
+@media screen and (min-width: 1170px) {
+  body {
+    padding: 0 15%;
   }
 }
 
@@ -61,6 +66,11 @@ section {
   justify-content: space-between;
   position: relative;
   grid-column: 2/5;
+}
+@media screen and (min-width: 1170px) {
+  .header {
+    grid-column: 2/4;
+  }
 }
 .header nav {
   position: absolute;
@@ -162,10 +172,16 @@ section {
     z-index: -10;
   }
 }
+@media screen and (min-width: 1170px) {
+  .home {
+    grid-template-columns: 1fr 1.5fr 1fr;
+  }
+}
 .home-title {
   margin-bottom: 20px;
   grid-column: 1/2;
   grid-row: 1/2;
+  z-index: 10;
 }
 @media screen and (min-width: 768px) {
   .home-title {
@@ -203,6 +219,27 @@ section {
   display: block;
   margin-top: 20px;
 }
+.home-info::before {
+  content: "01";
+  font-size: 15rem;
+  position: absolute;
+  right: 0;
+  top: 0;
+  color: #3b3b3b;
+  z-index: -1;
+}
+@media screen and (min-width: 768px) {
+  .home-info::before {
+    left: 0;
+  }
+}
+@media screen and (min-width: 1170px) {
+  .home-info::before {
+    position: absolute;
+    font-size: 35rem;
+    left: -220px;
+  }
+}
 .home-images {
   display: flex;
   flex-direction: column;
@@ -213,7 +250,14 @@ section {
     grid-row: 2/3;
     grid-column: 2/3;
     margin-left: 20px;
-    z-index: -1;
+  }
+}
+@media screen and (min-width: 1170px) {
+  .home-images {
+    grid-column: 2/4;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
   }
 }
 .home-images .secondary {
@@ -224,6 +268,11 @@ section {
   .home-images .secondary {
     flex-direction: row;
     gap: 20px;
+  }
+}
+@media screen and (min-width: 1170px) {
+  .home-images .secondary {
+    grid-column: 2/3;
   }
 }
 .home-images .secondary .right-btn {

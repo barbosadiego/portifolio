@@ -36,10 +36,13 @@ body{
   @include device(tablet) {
     display: grid;
     grid-template-columns: 
-      minmax(20px, 50px)
+      20px
       repeat(3, 1fr)
-      minmax(20px, 50px)
+      20px
     ;
+  }
+  @include device(desktop){
+    padding: 0 15%;
   }
 }
 
@@ -89,6 +92,9 @@ section{
   justify-content: space-between;
   position: relative;
   grid-column: 2/5;
+  @include device(desktop){
+    grid-column: 2/4;
+  }
 
   nav{
     position: absolute;
@@ -187,11 +193,15 @@ section{
       z-index: -10;
     }
   }
+  @include device(desktop){
+    grid-template-columns: 1fr 1.5fr 1fr;
+  }
 
   &-title{
     margin-bottom: 20px;
     grid-column: 1/2;
     grid-row: 1/2;
+    z-index: 10;
     @include device(tablet){
       position: absolute;
       grid-column: 1/3;
@@ -227,6 +237,24 @@ section{
       display: block;
       margin-top: 20px;
     }
+
+    &::before{
+      content: '01';
+      font-size: 15rem;
+      position: absolute;
+      right: 0;
+      top: 0;
+      color: $bg-light;
+      z-index: -1;
+      @include device(tablet){
+        left: 0;
+      }
+      @include device(desktop){
+        position: absolute;
+        font-size: 35rem;
+        left: -220px;
+      }
+    }
   }
 
   &-images{
@@ -237,7 +265,13 @@ section{
       grid-row: 2/3;
       grid-column: 2/3;
       margin-left: 20px;
-      z-index: -1;
+      // z-index: -1;
+    }
+    @include device(desktop){
+      grid-column: 2/4;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
     }
 
     .secondary{
@@ -246,6 +280,9 @@ section{
       @include device(tablet){
         flex-direction: row;
         gap: 20px;
+      }
+      @include device(desktop){
+        grid-column: 2/3;
       }
       
       .right-btn{
