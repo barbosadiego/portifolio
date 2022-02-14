@@ -1,0 +1,105 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #242424;
+  color: #fff;
+}
+
+a {
+  color: #fff;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+section {
+  padding: 20px;
+}
+
+.header {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+.header nav {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  width: 70%;
+  text-align: right;
+  background-color: #ff7600;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease;
+}
+.header nav.show {
+  transform: translateX(0);
+}
+.header nav ul {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding-top: 50px;
+}
+.header nav ul a {
+  display: block;
+  text-transform: capitalize;
+  padding: 25px;
+  font-size: 1.4rem;
+}
+.header .close {
+  font-size: 2rem;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.home {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.home-title {
+  margin-bottom: 20px;
+}
+.home-title h1 {
+  color: #ff7600;
+  font-size: 3rem;
+  text-transform: uppercase;
+}
+.home-images {
+  display: flex;
+  flex-direction: column;
+}
+.home-images .secondary {
+  display: flex;
+  flex-direction: column;
+}
+.home-images .secondary .right-btn {
+  color: #ff7600;
+  font-size: 1.3rem;
+  cursor: pointer;
+}
+.home-images img {
+  margin: 10px 0;
+}
+.home-social {
+  margin-top: 50px;
+  display: flex;
+  gap: 30px;
+}
+.home-social img {
+  cursor: pointer;
+}
+
+/*# sourceMappingURL=style.css.map */
