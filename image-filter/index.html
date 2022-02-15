@@ -14,58 +14,59 @@
 <body>
 
   <div class="wrapper">
+
     <section class="sidenav">
       <h1>filter images</h1>
       <i class="close fas fa-times fa"></i>
       <div class="container">
-        <div class="container-search">
-          <h2>search image</h2>
-          <input type="text" placeholder="Search image">
-        </div>
         <div class="container-category">
           <h2>category</h2>
-          <div class="btn">all</div>
-          <div class="btn">food</div>
-          <div class="btn">animals</div>
-          <div class="btn">fish</div>
-          <div class="btn">flower</div>
+          <div class="btn cat" data-category="all" >all</div>
+          <div class="btn cat" data-category="food" >food</div>
+          <div class="btn cat" data-category="animals" >animals</div>
+          <div class="btn cat" data-category="fish" >fish</div>
+          <div class="btn cat" data-category="flower" >flower</div>
         </div>
         <div class="container-type">
           <h2>types</h2>
-          <div class="btn">all types</div>
-          <div class="btn">JPG</div>
-          <div class="btn">PNG</div>
-          <div class="btn">SVG</div>
+          <div class="btn type" data-type="all">all types</div>
+          <div class="btn type" data-type="jpg">JPG</div>
+          <div class="btn type" data-type="png">PNG</div>
+          <div class="btn type" data-type="svg" >SVG</div>
         </div>
-        <button class="btn reset">reset all</button>
       </div>
     </section >
+
     <section class="images">
       <div class="menu-btn fas fa-bars"></div>
       <h1>image gallery</h1>
       <div class="images-container">
-        <img src="images/img-1.jpg" alt="">
-        <img src="images/img-2.svg" alt="">
-        <img src="images/img-3.png" alt="">
-        <img src="images/img-4.jpg" alt="">
-        <img src="images/img-5.jpg" alt="">
-        <img src="images/img-6.png" alt="">
-        <img src="images/img-7.svg" alt="">
-        <img src="images/img-8.jpg" alt="">
-        <img src="images/img-9.png" alt="">
-        <img src="images/img-10.svg" alt="">
-        <img src="images/img-11.jpg" alt="">
-        <img src="images/img-12.svg" alt="">
-        <img src="images/img-13.png" alt="">
-        <img src="images/img-14.jpg" alt="">
-        <img src="images/img-15.png" alt="">
-        <img src="images/img-16.svg" alt="">
-        <img src="images/img-17.jpg" alt="">
-        <img src="images/img-18.svg" alt="">
-        <img src="images/img-19.png" alt="">
-        <img src="images/img-20.jpg" alt="">
+        <img src="images/img-1.jpg" data-cat="animals" alt="">
+        <img src="images/img-2.svg" data-cat="animals" alt="">
+        <img src="images/img-3.png" data-cat="food" alt="">
+        <img src="images/img-4.jpg" data-cat="fish" alt="">
+        <img src="images/img-5.jpg" data-cat="animals" alt="">
+        <img src="images/img-6.png" data-cat="animals" alt="">
+        <img src="images/img-7.svg" data-cat="animals" alt="">
+        <img src="images/img-8.jpg" data-cat="animals" alt="">
+        <img src="images/img-9.png" data-cat="animals" alt="">
+        <img src="images/img-10.svg" data-cat="fish" alt="">
+        <img src="images/img-11.jpg" data-cat="food" alt="">
+        <img src="images/img-12.svg" data-cat="food" alt="">
+        <img src="images/img-13.png" data-cat="food" alt="">
+        <img src="images/img-14.jpg" data-cat="food" alt="">
+        <img src="images/img-15.png" data-cat="food" alt="">
+        <img src="images/img-16.svg" data-cat="food" alt="">
+        <img src="images/img-17.jpg" data-cat="food" alt="">
+        <img src="images/img-18.svg" data-cat="flower"  alt="">
+        <img src="images/img-19.png" data-cat="flower" alt="">
+        <img src="images/img-20.jpg" data-cat="flower" alt="">
       </div>
     </section>
+  </div>
+
+  <div class="modal-img">
+    <img src="" alt="">
   </div>
   
   <script src="js/script.js"></script>
