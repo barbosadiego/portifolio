@@ -1,4 +1,5 @@
 import createItem from "./create-item.js";
+import { randomContainer } from "./create-item.js";
 
 const searchBtn = document.querySelector(".search");
 const searchInput = document.getElementById("search-input");

@@ -1,10 +1,11 @@
 import favoriteMeal from "./favorites-meals.js";
 import favorites from "./add-fav-item.js";
+import mealModalInfo from "./meal-modal-info.js";
 
 // recipe of the day
-let randomContainer = document.querySelector(".random");
-const mealModal = document.querySelector('.meal-modal');
-const closeBnt = document.querySelector('.meal-modal .close-btn')
+export let randomContainer = document.querySelector(".random");
+export const mealModal = document.querySelector('.meal-modal');
+export const closeBnt = document.querySelector('.meal-modal .close-btn')
 
 
 export default function createItem(item, random = false) {
@@ -30,6 +31,7 @@ export default function createItem(item, random = false) {
   });
 
   div.querySelector('.img').addEventListener('click', () => {
+    mealModalInfo(item)
     mealModal.classList.add('show')
   })
   closeBnt.addEventListener('click', () => {

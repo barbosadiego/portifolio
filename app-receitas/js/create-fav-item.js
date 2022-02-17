@@ -1,5 +1,6 @@
 import { favoriteContainer } from "./add-fav-item.js";
 import { removeFromLS } from "./local-storage.js";
+import mealModal from "./meal-modal-info.js";
 
 export default function createFavorite(item) {
   const div = document.createElement("div");
@@ -17,5 +18,9 @@ export default function createFavorite(item) {
 
   div
     .querySelector(".close")
-    .addEventListener("click", () => removeFromLS(item.idMeal));
+    .addEventListener("click", () => removeFromLS(item.idMeal))
+  ;
+  div
+    .addEventListener('click', () => mealModal(item))
+  
 }
