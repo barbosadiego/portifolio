@@ -1,5 +1,7 @@
 // recipe of the day
 let randomContainer = document.querySelector(".random");
+const mealModal = document.querySelector('.meal-modal');
+const closeBnt = document.querySelector('.meal-modal .close-btn')
 
 function createItem(item, random = false) {
   const div = document.createElement("div");
@@ -22,6 +24,13 @@ function createItem(item, random = false) {
     favorites();
     document.location.reload();
   });
+
+  div.querySelector('.img').addEventListener('click', () => {
+    mealModal.classList.add('show')
+  })
+  closeBnt.addEventListener('click', () => {
+    mealModal.classList.remove('show')
+  })
 }
 
 // get random recipe from API
@@ -49,8 +58,6 @@ async function favorites() {
     createFavorite(meal);
   }
 }
-
-favorites();
 
 function createFavorite(item) {
   const div = document.createElement("div");
@@ -103,10 +110,7 @@ async function searchByName(name) {
   const respName = await mealName.json();
   const nameData = respName.meals;
   nameData.forEach(item => createItem(item))
-  console.log(nameData);
 }
-
-// meal modal
 
 // local storage
 function setMealLS(mealId) {
@@ -127,3 +131,4 @@ function getMealLS() {
 
 // init
 getRandomMeal();
+favorites();
