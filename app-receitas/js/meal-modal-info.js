@@ -1,8 +1,5 @@
 import { mealModal as container } from "./create-item.js";
-const item = document.querySelector('.random .img');
 const ingredients = []
-
-
 
 export default function mealModal(meal){
 
@@ -30,7 +27,6 @@ export default function mealModal(meal){
       </ul>
     </div>
   `;
-
 
   container.appendChild(div)
   container.classList.add('show')
