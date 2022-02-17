@@ -1,0 +1,30 @@
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  height: 300px;
+  width: 300px;
+}
+
+.link {
+  width: auto;
+  height: 500px;
+}
+
+.link-item-1 {
+  background-image: url(../images/capa-26.jpg);
+  background-size: contain;
+  object-fit: cover;
+  background-repeat: no-repeat;
+}
+
+.link-item-2 {
+  background-image: url(../images/capa-2.png);
+  background-size: contain;
+  object-fit: cover;
+  background-repeat: no-repeat;
+}
+
+/*# sourceMappingURL=style.css.map */
