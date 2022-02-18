@@ -114,7 +114,7 @@ data.forEach((item, index) => {
 function createLink(item, index){
   const div = document.createElement('div');
   div.classList.add('link');
-  div.classList.add(index + 1)
+  // div.classList.add(`item-${index + 1}`)
   div.innerHTML = `
     <a href="${item.link}">ver projeto</a>
     <div><img src="${item.url}"></div>
