@@ -116,7 +116,7 @@ function createLink(item, index){
   div.classList.add('link');
   // div.classList.add(`item-${index + 1}`)
   div.innerHTML = `
-    <a href="${item.link}">ver projeto</a>
+    <a href="${item.link}" target="_blank">ver projeto</a>
     <div><img src="${item.url}"></div>
   `;
   container.appendChild(div);
