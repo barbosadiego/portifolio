@@ -16,8 +16,8 @@ body {
 }
 
 .container {
-  min-height: 500px;
-  min-width: 330px;
+  min-height: 550px;
+  min-width: 400px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -34,6 +34,7 @@ body {
 .container__info .input {
   display: flex;
   align-items: stretch;
+  margin-bottom: 30px;
 }
 .container__info input[type=text] {
   padding: 10px;
@@ -65,10 +66,14 @@ body {
   font-size: 3rem;
   line-height: 2;
 }
+.container__info p {
+  color: aliceblue;
+}
 .container__icon {
   display: flex;
   flex-direction: column;
   align-items: center;
+  color: aliceblue;
 }
 
 /*# sourceMappingURL=style.css.map */
