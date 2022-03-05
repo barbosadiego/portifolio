@@ -1,0 +1,143 @@
+$darkBlue: #03045E;
+$darkBrown: #474306;
+$yellow: #F5EE84;
+$lightYellow: #FBF8CC;
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+
+html{
+  background-color: $lightYellow;
+  font-size: 62.5%;
+}
+
+body{
+  font-family: 'Poppins', sans-serif;
+  padding: 10px;
+  font-size: 1.6rem;
+}
+
+img{
+  display: block;
+  max-width: 100%;
+}
+
+section{
+  margin: 50px 0;
+}
+
+header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+
+  .logo{
+    color: $darkBlue;
+    font-weight: 600;
+    font-size: 2.4rem;
+  }
+
+  nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: $yellow;
+    height: 100vh;
+    width: 80%;
+    box-shadow: 0 0 0 180px rgba($color: #000000, $alpha: .3);
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 50px;
+    transform: translateX(-100%);
+    opacity: 0;
+    transition: .3s ease;
+
+    &.show{
+      transform: translateY(0);
+      opacity: 1;
+    }
+
+    a{
+      font-size: 2.8rem;
+      font-weight: 400;
+      color: $darkBlue;
+      text-transform: capitalize;
+      display: block;
+      padding: 30px;
+    }
+  }
+
+  i{
+    font-size: 2rem;
+    margin-left: 10px;
+    cursor: pointer;
+  }
+
+  .mobile-menu{
+    padding: 8px;
+    cursor: pointer;
+    
+    &::before{
+      content: '';
+      display: block;
+      width: 30px;
+      height: 3px;
+      background-color: $darkBlue;
+      transform: translateY(-5px);
+    }
+
+    &::after{
+      content: '';
+      display: block;
+      width: 30px;
+      height: 3px;
+      background-color: $darkBlue;
+      transform: translateY(5px);
+
+    }
+
+    .line{
+      width: 30px;
+      height: 3px;
+      background-color: $darkBlue;
+    }
+  }
+}
+
+.intro{
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+
+
+  &__text{
+    color: $darkBlue;
+  
+    h1{
+      font-size: 7rem;
+      line-height: 1;
+    }
+    p{
+      font-size: 2rem;
+      line-height: 2;
+    }
+
+    button{
+      height: 68px;
+      width: 164px;
+      margin-top: 40px;
+      background-color: transparent;
+      border-radius: 6px;
+      border: 1px solid $darkBrown;
+      font-size: 2rem;
+      color: $darkBrown;
+      box-shadow: 6px 6px 0 2px rgba(245, 238, 132, 1);
+    }
+  }
+}

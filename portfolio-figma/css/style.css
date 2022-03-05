@@ -6,9 +6,121 @@
   text-decoration: none;
 }
 
+html {
+  background-color: #FBF8CC;
+  font-size: 62.5%;
+}
+
 body {
   font-family: "Poppins", sans-serif;
-  background-color: #FBF8CC;
+  padding: 10px;
+  font-size: 1.6rem;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+section {
+  margin: 50px 0;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+}
+header .logo {
+  color: #03045E;
+  font-weight: 600;
+  font-size: 2.4rem;
+}
+header nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #F5EE84;
+  height: 100vh;
+  width: 80%;
+  box-shadow: 0 0 0 180px rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 50px;
+  transform: translateX(-100%);
+  opacity: 0;
+  transition: 0.3s ease;
+}
+header nav.show {
+  transform: translateY(0);
+  opacity: 1;
+}
+header nav a {
+  font-size: 2.8rem;
+  font-weight: 400;
+  color: #03045E;
+  text-transform: capitalize;
+  display: block;
+  padding: 30px;
+}
+header i {
+  font-size: 2rem;
+  margin-left: 10px;
+  cursor: pointer;
+}
+header .mobile-menu {
+  padding: 8px;
+  cursor: pointer;
+}
+header .mobile-menu::before {
+  content: "";
+  display: block;
+  width: 30px;
+  height: 3px;
+  background-color: #03045E;
+  transform: translateY(-5px);
+}
+header .mobile-menu::after {
+  content: "";
+  display: block;
+  width: 30px;
+  height: 3px;
+  background-color: #03045E;
+  transform: translateY(5px);
+}
+header .mobile-menu .line {
+  width: 30px;
+  height: 3px;
+  background-color: #03045E;
+}
+
+.intro {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.intro__text {
+  color: #03045E;
+}
+.intro__text h1 {
+  font-size: 7rem;
+  line-height: 1;
+}
+.intro__text p {
+  font-size: 2rem;
+  line-height: 2;
+}
+.intro__text button {
+  height: 68px;
+  width: 164px;
+  margin-top: 40px;
+  background-color: transparent;
+  border-radius: 6px;
+  border: 1px solid #474306;
+  font-size: 2rem;
+  color: #474306;
+  box-shadow: 6px 6px 0 2px #f5ee84;
 }
 
 /*# sourceMappingURL=style.css.map */
