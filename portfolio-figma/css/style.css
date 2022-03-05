@@ -68,6 +68,7 @@ header i {
   font-size: 2rem;
   margin-left: 10px;
   cursor: pointer;
+  color: #03045E;
 }
 header .mobile-menu {
   padding: 8px;
@@ -121,6 +122,72 @@ header .mobile-menu .line {
   font-size: 2rem;
   color: #474306;
   box-shadow: 6px 6px 0 2px #f5ee84;
+}
+
+.about {
+  padding: 30px 0;
+}
+.about h1 {
+  color: #ede126;
+  font-size: 4rem;
+  margin-bottom: 30px;
+}
+.about .info {
+  margin-bottom: 30px;
+}
+.about__time-line ul li {
+  list-style: initial;
+  padding-left: 10px;
+  margin-left: 20px;
+}
+.about__time-line ul li::marker {
+  color: #03045E;
+  font-size: 350%;
+  content: ".";
+}
+
+.work {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  color: #03045E;
+}
+.work h1 {
+  color: #ede126;
+  font-size: 4rem;
+}
+.work__content {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.work__content .item {
+  display: flex;
+  flex-direction: column;
+}
+.work__content .item span {
+  font-size: 1.3rem;
+  margin: 10px 0 20px;
+}
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.contact h1 {
+  color: #ede126;
+  font-size: 4rem;
+}
+.contact .text {
+  margin-top: 30px;
+}
+.contact .text p {
+  margin: 20px 0;
+}
+.contact .text a {
+  display: block;
+  color: #03045E;
 }
 
 /*# sourceMappingURL=style.css.map */
