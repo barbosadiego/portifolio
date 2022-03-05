@@ -1,0 +1,81 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: 'Poppins', sans-serif;
+  height: 100vh;
+  width: 100vw;
+  background: url(../images/wes-hicks-5KECmvb8lUQ-unsplash.jpg) center no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container{
+  min-height: 500px;
+  min-width: 330px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: rgba($color: #fff, $alpha: .2);
+  border-radius: 20px;
+  backdrop-filter: blur(5px);
+  padding: 20px;
+
+  &__info{
+    text-align: center;
+    color: #111;
+
+    .input{
+      display: flex;
+      align-items: stretch;
+    }
+    
+    input[type="text"]{
+      padding: 10px;
+      border: none;
+      font-family: inherit;
+      outline: none;
+      border-radius: 10px 0 0 10px;
+    }
+
+    input[type="submit"]{
+      border: none;
+      width: 60px;
+      border-radius: 0 10px 10px 0;
+      cursor: pointer;
+      font-family: inherit;
+    }
+
+    span{
+      font-size: 6rem;
+      font-weight: bold;
+    }
+
+    h1{
+      font-size: 3rem;
+    }
+
+    div{
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+
+      .symbol{
+        font-size: 3rem;
+        line-height: 2;
+      }
+    }
+  }
+
+  &__icon{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}

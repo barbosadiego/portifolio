@@ -4,15 +4,25 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
   <title>Weather App</title>
 </head>
 <body>
   <section class="container">
     <div class="container__info">
+      <div class="input">
+        <input type="text" name="location" id="location" placeholder="Type here">
+        <input type="submit" value="Search">
+      </div>
       <h1>Dunkirk</h1>
-      <p>25ºC</p>
-      <p>Mostly Cloudy / Rain Showers</p>
+      <div>
+        <span>25</span>
+        <span class="symbol">ºC</span>
+      </div>
+      <p class="text">Mostly Cloudy / Rain Showers</p>
     </div>
     <div class="container__icon">
       <p>13:00</p>
