@@ -103,12 +103,16 @@ const data = [
     url: "./painel/images/capa-26.jpg",
     link: "./app-receitas/index.html",
   },
+  {
+    url: "./painel/images/capa-27.jpg",
+    link: "./weather-app/index.html",
+  },
 ];
 
-const container = document.querySelector('.container')
+const container = document.querySelector('.container');
 
 data.forEach((item, index) => {
-  createLink(item, index)
+  createLink(item, index);
 })
 
 function createLink(item, index){
