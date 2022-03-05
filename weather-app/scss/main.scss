@@ -16,8 +16,8 @@ body{
 }
 
 .container{
-  min-height: 500px;
-  min-width: 330px;
+  min-height: 550px;
+  min-width: 400px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -34,6 +34,7 @@ body{
     .input{
       display: flex;
       align-items: stretch;
+      margin-bottom: 30px;
     }
     
     input[type="text"]{
@@ -71,11 +72,16 @@ body{
         line-height: 2;
       }
     }
+
+    p{
+      color: aliceblue;
+    }
   }
 
   &__icon{
     display: flex;
     flex-direction: column;
     align-items: center;
+    color: aliceblue;
   }
 }
