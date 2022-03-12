@@ -1,9 +1,9 @@
-$darkBlue: #03045E;
+$darkBlue: #03045e;
 $darkBrown: #474306;
-$yellow: #F5EE84;
-$lightYellow: #FBF8CC;
+$yellow: #f5ee84;
+$lightYellow: #fbf8cc;
 
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -11,81 +11,140 @@ $lightYellow: #FBF8CC;
   text-decoration: none;
 }
 
-html{
+@mixin tablet() {
+  @media screen and (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin desktop() {
+  @media screen and (min-width: 1170px) {
+    @content;
+  }
+}
+
+html {
   background-color: $lightYellow;
   font-size: 62.5%;
+  // scroll-behavior: smooth;
 }
 
-body{
-  font-family: 'Poppins', sans-serif;
+body {
+  font-family: "Poppins", sans-serif;
   padding: 10px;
   font-size: 1.6rem;
+
+  h1.title{
+    color: darken($yellow, 20%);
+    font-size: 4rem;
+    margin-bottom: 30px;
+    @include desktop(){
+      font-size: 10rem;
+    }
+  }
 }
 
-img{
+img {
   display: block;
   max-width: 100%;
 }
 
-section{
+
+section {
   margin: 50px 0;
+  @include desktop(){
+    max-width: 1170px;
+    margin: 0 auto;
+  }
 }
 
-header{
+header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 10px 0;
+  @include desktop(){
+    max-width: 1170px;
+    margin: 0 auto;
+  }
 
-  .logo{
+  .logo {
     color: $darkBlue;
     font-weight: 600;
     font-size: 2.4rem;
   }
 
-  nav{
+  nav {
     position: fixed;
     top: 0;
     left: 0;
     background-color: $yellow;
     height: 100vh;
     width: 80%;
-    box-shadow: 0 0 0 180px rgba($color: #000000, $alpha: .3);
+    box-shadow: 0 0 0 180px rgba($color: #000000, $alpha: 0.3);
     display: flex;
     justify-content: flex-end;
     padding-top: 50px;
     transform: translateX(-100%);
     opacity: 0;
-    transition: .3s ease;
+    transition: 0.3s ease;
 
-    &.show{
+    @include desktop() {
+      position: unset;
+      display: unset;
+      height: unset;
+      width: unset;
+      opacity: 1;
+      box-shadow: none;
+      background-color: transparent;
+      padding-top: 0;
+      transform: translateX(0);
+    }
+
+    @include desktop(){
+      ul{
+        display: flex;
+        gap: 30px;
+      }
+    }
+
+    &.show {
       transform: translateY(0);
       opacity: 1;
     }
 
-    a{
+    a {
       font-size: 2.8rem;
       font-weight: 400;
       color: $darkBlue;
       text-transform: capitalize;
       display: block;
       padding: 30px;
+
+      @include desktop() {
+        padding: unset;
+        font-size: 1.5rem;
+      }
     }
   }
 
-  i{
+  i {
     font-size: 2rem;
     margin-left: 10px;
     cursor: pointer;
     color: $darkBlue;
   }
 
-  .mobile-menu{
+  .mobile-menu {
     padding: 8px;
     cursor: pointer;
-    
-    &::before{
-      content: '';
+
+    @include desktop(){
+      display: none;
+    }
+
+    &::before {
+      content: "";
       display: block;
       width: 30px;
       height: 3px;
@@ -93,17 +152,16 @@ header{
       transform: translateY(-5px);
     }
 
-    &::after{
-      content: '';
+    &::after {
+      content: "";
       display: block;
       width: 30px;
       height: 3px;
       background-color: $darkBlue;
       transform: translateY(5px);
-
     }
 
-    .line{
+    .line {
       width: 30px;
       height: 3px;
       background-color: $darkBlue;
@@ -111,27 +169,43 @@ header{
   }
 }
 
-.intro{
+.intro {
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 30px;
+  @include desktop(){
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px 0;
+  }
 
-
-  &__text{
+  &__text {
     color: $darkBlue;
-  
-    h1{
-      font-size: 7rem;
-      line-height: 1;
+    text-align: center;
+    @include desktop(){
+      text-align: left;
+      flex: 1;
     }
-    p{
+
+    h1 {
+      font-size: 7rem;
+      font-weight: bold;
+      line-height: 1;
+      @include desktop(){
+        font-size: 8.5rem;
+        line-height: 1.1;
+      }
+    }
+    p {
       font-size: 2rem;
       line-height: 2;
     }
 
-    button{
-      height: 68px;
-      width: 164px;
+    button {
+      height: 48px;
+      width: 154px;
       margin-top: 40px;
       background-color: transparent;
       border-radius: 6px;
@@ -139,87 +213,157 @@ header{
       font-size: 2rem;
       color: $darkBrown;
       box-shadow: 6px 6px 0 2px rgba(245, 238, 132, 1);
+      cursor: pointer;
     }
   }
-}
 
-.about{
-  padding: 30px 0;
+  &__image{
+    position: relative;
+    flex: 1;
 
-  h1{
-    color: darken($yellow, 20%);
-    font-size: 4rem;
-    margin-bottom: 30px;
+    div::after{
+      content: '';
+      display: block;
+      position: absolute;
+      top: 0;
+      right: 60px;
+      background: url(../images/Group10.png) no-repeat center;
+      height: 56px;
+      width: 50px;
+    }
+
+    div::before{
+      content: '';
+      display: block;
+      position: absolute;
+      bottom: 100px;
+      left: 0;
+      background: url(../images/Group6.png) no-repeat center;
+      height: 30px;
+      width: 106px;
+    }
   }
 
-  .info{
+}
+
+.about {
+  padding: 30px 0;
+
+  p{
+    color: $darkBlue;
+    @include desktop(){
+      // font-size: 1.3rem;
+    }
+  }
+
+  .info {
     margin-bottom: 30px;
   }
 
   &__time-line {
+    @include desktop(){
+      padding-left: 200px;
+    }
 
-    ul li{
+    ul li {
       list-style: initial;
       padding-left: 10px;
       margin-left: 20px;
+
+      p:first-child{
+        font-weight: bold;
+        margin-bottom: 10px;
+      }
     }
 
-    ul li::marker{
+    ul li::marker {
       color: $darkBlue;
       font-size: 350%;
-      content: '.';
+      content: ".";
     }
   }
 }
 
-.work{
+.work {
   display: flex;
   flex-direction: column;
   gap: 30px;
   color: $darkBlue;
 
-  h1{
+  h1 {
     color: darken($yellow, $amount: 20%);
     font-size: 4rem;
   }
 
-  &__content{
+  &__content {
     display: flex;
     flex-direction: column;
     gap: 30px;
+    @include desktop(){
+      flex-direction: row;
+      margin-bottom: 80px;
+    }
 
-    .item{
+    .item {
       display: flex;
       flex-direction: column;
-      
-      span{
+      align-items: center;
+
+      span {
         font-size: 1.3rem;
         margin: 10px 0 20px;
+      }
+
+      h3{
+        margin-bottom: 10px;
+      }
+
+      p{
+        font-weight: bold;
+        text-align: center;
       }
     }
   }
 }
 
-.contact{
+.contact {
   display: flex;
   flex-direction: column;
   gap: 30px;
+  @include desktop(){
+    padding-bottom: 20px;
+  }
 
-  h1{
+  h1 {
     color: darken($yellow, 20%);
     font-size: 4rem;
   }
 
-  .text{
-    margin-top: 30px;
+  &__info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @include desktop(){
+      flex-direction: row;
+      gap: 50px;
 
-    p{
-      margin: 20px 0;
+      div{
+        flex: 1;
+      }
     }
 
-    a{
-      display: block;
-      color: $darkBlue;
+    .text {
+      flex: 2;
+      margin-top: 30px;
+      
+      p {
+        margin: 20px 0;
+      }
+  
+      a {
+        display: block;
+        color: $darkBlue;
+      }
     }
   }
 }

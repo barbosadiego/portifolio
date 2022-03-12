@@ -7,7 +7,7 @@
 }
 
 html {
-  background-color: #FBF8CC;
+  background-color: #fbf8cc;
   font-size: 62.5%;
 }
 
@@ -15,6 +15,16 @@ body {
   font-family: "Poppins", sans-serif;
   padding: 10px;
   font-size: 1.6rem;
+}
+body h1.title {
+  color: #ede126;
+  font-size: 4rem;
+  margin-bottom: 30px;
+}
+@media screen and (min-width: 1170px) {
+  body h1.title {
+    font-size: 10rem;
+  }
 }
 
 img {
@@ -25,6 +35,12 @@ img {
 section {
   margin: 50px 0;
 }
+@media screen and (min-width: 1170px) {
+  section {
+    max-width: 1170px;
+    margin: 0 auto;
+  }
+}
 
 header {
   display: flex;
@@ -32,8 +48,14 @@ header {
   align-items: center;
   padding: 10px 0;
 }
+@media screen and (min-width: 1170px) {
+  header {
+    max-width: 1170px;
+    margin: 0 auto;
+  }
+}
 header .logo {
-  color: #03045E;
+  color: #03045e;
   font-weight: 600;
   font-size: 2.4rem;
 }
@@ -41,7 +63,7 @@ header nav {
   position: fixed;
   top: 0;
   left: 0;
-  background-color: #F5EE84;
+  background-color: #f5ee84;
   height: 100vh;
   width: 80%;
   box-shadow: 0 0 0 180px rgba(0, 0, 0, 0.3);
@@ -52,6 +74,25 @@ header nav {
   opacity: 0;
   transition: 0.3s ease;
 }
+@media screen and (min-width: 1170px) {
+  header nav {
+    position: unset;
+    display: unset;
+    height: unset;
+    width: unset;
+    opacity: 1;
+    box-shadow: none;
+    background-color: transparent;
+    padding-top: 0;
+    transform: translateX(0);
+  }
+}
+@media screen and (min-width: 1170px) {
+  header nav ul {
+    display: flex;
+    gap: 30px;
+  }
+}
 header nav.show {
   transform: translateY(0);
   opacity: 1;
@@ -59,27 +100,38 @@ header nav.show {
 header nav a {
   font-size: 2.8rem;
   font-weight: 400;
-  color: #03045E;
+  color: #03045e;
   text-transform: capitalize;
   display: block;
   padding: 30px;
+}
+@media screen and (min-width: 1170px) {
+  header nav a {
+    padding: unset;
+    font-size: 1.5rem;
+  }
 }
 header i {
   font-size: 2rem;
   margin-left: 10px;
   cursor: pointer;
-  color: #03045E;
+  color: #03045e;
 }
 header .mobile-menu {
   padding: 8px;
   cursor: pointer;
+}
+@media screen and (min-width: 1170px) {
+  header .mobile-menu {
+    display: none;
+  }
 }
 header .mobile-menu::before {
   content: "";
   display: block;
   width: 30px;
   height: 3px;
-  background-color: #03045E;
+  background-color: #03045e;
   transform: translateY(-5px);
 }
 header .mobile-menu::after {
@@ -87,34 +139,57 @@ header .mobile-menu::after {
   display: block;
   width: 30px;
   height: 3px;
-  background-color: #03045E;
+  background-color: #03045e;
   transform: translateY(5px);
 }
 header .mobile-menu .line {
   width: 30px;
   height: 3px;
-  background-color: #03045E;
+  background-color: #03045e;
 }
 
 .intro {
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 30px;
 }
+@media screen and (min-width: 1170px) {
+  .intro {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px 0;
+  }
+}
 .intro__text {
-  color: #03045E;
+  color: #03045e;
+  text-align: center;
+}
+@media screen and (min-width: 1170px) {
+  .intro__text {
+    text-align: left;
+    flex: 1;
+  }
 }
 .intro__text h1 {
   font-size: 7rem;
+  font-weight: bold;
   line-height: 1;
+}
+@media screen and (min-width: 1170px) {
+  .intro__text h1 {
+    font-size: 8.5rem;
+    line-height: 1.1;
+  }
 }
 .intro__text p {
   font-size: 2rem;
   line-height: 2;
 }
 .intro__text button {
-  height: 68px;
-  width: 164px;
+  height: 48px;
+  width: 154px;
   margin-top: 40px;
   background-color: transparent;
   border-radius: 6px;
@@ -122,26 +197,58 @@ header .mobile-menu .line {
   font-size: 2rem;
   color: #474306;
   box-shadow: 6px 6px 0 2px #f5ee84;
+  cursor: pointer;
+}
+.intro__image {
+  position: relative;
+  flex: 1;
+}
+.intro__image div::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 60px;
+  background: url(../images/Group10.png) no-repeat center;
+  height: 56px;
+  width: 50px;
+}
+.intro__image div::before {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 100px;
+  left: 0;
+  background: url(../images/Group6.png) no-repeat center;
+  height: 30px;
+  width: 106px;
 }
 
 .about {
   padding: 30px 0;
 }
-.about h1 {
-  color: #ede126;
-  font-size: 4rem;
-  margin-bottom: 30px;
+.about p {
+  color: #03045e;
 }
 .about .info {
   margin-bottom: 30px;
+}
+@media screen and (min-width: 1170px) {
+  .about__time-line {
+    padding-left: 200px;
+  }
 }
 .about__time-line ul li {
   list-style: initial;
   padding-left: 10px;
   margin-left: 20px;
 }
+.about__time-line ul li p:first-child {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
 .about__time-line ul li::marker {
-  color: #03045E;
+  color: #03045e;
   font-size: 350%;
   content: ".";
 }
@@ -150,7 +257,7 @@ header .mobile-menu .line {
   display: flex;
   flex-direction: column;
   gap: 30px;
-  color: #03045E;
+  color: #03045e;
 }
 .work h1 {
   color: #ede126;
@@ -161,13 +268,27 @@ header .mobile-menu .line {
   flex-direction: column;
   gap: 30px;
 }
+@media screen and (min-width: 1170px) {
+  .work__content {
+    flex-direction: row;
+    margin-bottom: 80px;
+  }
+}
 .work__content .item {
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 .work__content .item span {
   font-size: 1.3rem;
   margin: 10px 0 20px;
+}
+.work__content .item h3 {
+  margin-bottom: 10px;
+}
+.work__content .item p {
+  font-weight: bold;
+  text-align: center;
 }
 
 .contact {
@@ -175,19 +296,39 @@ header .mobile-menu .line {
   flex-direction: column;
   gap: 30px;
 }
+@media screen and (min-width: 1170px) {
+  .contact {
+    padding-bottom: 20px;
+  }
+}
 .contact h1 {
   color: #ede126;
   font-size: 4rem;
 }
-.contact .text {
+.contact__info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media screen and (min-width: 1170px) {
+  .contact__info {
+    flex-direction: row;
+    gap: 50px;
+  }
+  .contact__info div {
+    flex: 1;
+  }
+}
+.contact__info .text {
+  flex: 2;
   margin-top: 30px;
 }
-.contact .text p {
+.contact__info .text p {
   margin: 20px 0;
 }
-.contact .text a {
+.contact__info .text a {
   display: block;
-  color: #03045E;
+  color: #03045e;
 }
 
 /*# sourceMappingURL=style.css.map */
