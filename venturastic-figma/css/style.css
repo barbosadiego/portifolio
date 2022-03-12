@@ -1,0 +1,275 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+body {
+  font-family: "Unna", Georgia, "Times New Roman", Times, serif;
+}
+
+a {
+  font-family: "Montserrat";
+  text-transform: uppercase;
+  color: #4D4D4D;
+  font-weight: 500;
+}
+
+section {
+  padding: 10px;
+}
+
+.header {
+  padding: 10px;
+}
+.header__nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header__nav .logo svg {
+  height: 70px;
+}
+.header__nav .list {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transform: translateY(-100%);
+}
+.header__nav .list.active {
+  transform: translateY(0);
+}
+.header__nav .list a {
+  padding: 30px;
+  display: block;
+}
+.header__nav .list a:hover {
+  color: #009CC4;
+  font-weight: bold;
+}
+.header__nav .menu-mobile {
+  padding: 20px;
+  cursor: pointer;
+}
+.header__nav .menu-mobile::after {
+  content: "";
+  display: block;
+  width: 30px;
+  height: 4px;
+  background-color: #009CC4;
+  transition: transform 0.3s ease;
+}
+.header__nav .menu-mobile::before {
+  content: "";
+  display: block;
+  width: 30px;
+  height: 4px;
+  background-color: #009CC4;
+  transform: translateY(6px);
+  transition: transform 0.3s ease;
+}
+.header__nav .menu-mobile.active::after {
+  transform: translateY(-11px) rotateZ(45deg);
+}
+.header__nav .menu-mobile.active::before {
+  transform: translateY(11px) rotateZ(-45deg);
+}
+.header__nav .menu-mobile .line {
+  display: inline-block;
+  width: 30px;
+  height: 4px;
+  background-color: #009CC4;
+  transition: transform 0.3s ease;
+}
+.header__nav .menu-mobile.active .line {
+  opacity: 0;
+}
+
+.banner {
+  background: url(../images/Banner.jpg) no-repeat center;
+  background-size: cover;
+  height: 661px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+.banner h1 {
+  font-size: 3.875rem;
+  font-family: "Unna";
+  font-weight: 400;
+  text-align: center;
+}
+.banner p {
+  font-family: "Unna";
+  text-align: center;
+  margin-top: 42px;
+  font-size: 1.25rem;
+}
+
+.more-about-us {
+  margin: 75px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.more-about-us__text span {
+  display: block;
+  color: #009CC4;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+.more-about-us__text h1 {
+  font-family: "Unna";
+  font-weight: 400;
+  font-size: 3.25rem;
+  line-height: 1;
+  margin-bottom: 40px;
+}
+.more-about-us__text p {
+  font-size: 1rem;
+  line-height: 1.4;
+  margin-bottom: 30px;
+  padding-left: 30px;
+  position: relative;
+}
+.more-about-us__text p::before {
+  content: "";
+  display: inline-block;
+  width: 2px;
+  height: 66px;
+  background-color: #009CC4;
+  position: absolute;
+  left: 10px;
+}
+
+.middle {
+  padding: 0;
+}
+.middle__card {
+  padding: 50px;
+}
+.middle__card .title {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.middle__card .title span {
+  font-size: 3.875rem;
+  color: #009CC4;
+}
+.middle__card .title h3 {
+  font-size: 1.75rem;
+  font-family: "Unna";
+  line-height: 1;
+}
+.middle__card:nth-child(odd) {
+  background-color: #F3F0E9;
+}
+
+.leader {
+  margin: 75px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.leader__text span {
+  font-size: 1rem;
+  color: #009CC4;
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 10px;
+}
+.leader__text h1 {
+  font-size: 3.25rem;
+  line-height: 1;
+  font-weight: 400;
+  margin-bottom: 40px;
+}
+.leader__text p {
+  margin-bottom: 30px;
+}
+.leader__info ul li {
+  display: flex;
+  align-items: center;
+  margin-top: 30px;
+}
+.leader__info ul li div {
+  flex: 0 0 auto;
+}
+.leader__info ul li p {
+  padding-left: 20px;
+  font-size: 1.25rem;
+}
+
+.team {
+  padding: 60px 0;
+  text-align: center;
+  background-color: #F3F0E9;
+}
+.team span {
+  font-size: 1rem;
+  color: #009CC4;
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 10px;
+}
+.team h1 {
+  font-family: "Unna";
+  font-weight: 400;
+  margin-bottom: 30px;
+  line-height: 1;
+}
+.team p {
+  font-size: 1rem;
+  font-weight: 200;
+  margin-bottom: 30px;
+  padding: 0 30px;
+}
+
+.footer {
+  background-color: #313335;
+  color: #fff;
+  text-align: center;
+  padding: 50px 0;
+}
+.footer__links, .footer ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+.footer a {
+  color: #fff;
+  font-family: "Unna";
+}
+.footer h3 {
+  margin: 30px 0;
+  font-family: "Unna";
+  text-transform: uppercase;
+}
+
+.bottom {
+  background-color: #181818;
+  color: #fff;
+  text-align: center;
+  font-family: "Unna";
+  line-height: 1.6;
+}
+
+/*# sourceMappingURL=style.css.map */
