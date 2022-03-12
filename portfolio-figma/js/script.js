@@ -1,11 +1,5 @@
-const btn = document.querySelector('.mobile-menu');
-const nav = document.querySelector('nav');
-const links = document.querySelectorAll('nav a');
+import initMemuMobile from "./menu-mobile.js";
+import initSmoothScroll from  "./smooth-scroll.js";
 
-btn.addEventListener('click', () => {
-  nav.classList.toggle('show');
-})
-
-links.forEach(link => link.addEventListener('click', () => {
-  nav.classList.remove('show');
-}))
+initMemuMobile();
+initSmoothScroll();
