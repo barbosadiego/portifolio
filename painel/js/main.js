@@ -107,6 +107,10 @@ const data = [
     url: "./painel/images/capa-27.jpg",
     link: "./weather-app/index.html",
   },
+  {
+    url: "./painel/images/capa-28.jpg",
+    link: "./portfolio-figma/index.html",
+  },
 ];
 
 const container = document.querySelector('.container');
