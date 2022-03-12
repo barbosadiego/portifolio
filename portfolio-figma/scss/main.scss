@@ -88,6 +88,7 @@ header {
     transform: translateX(-100%);
     opacity: 0;
     transition: 0.3s ease;
+    z-index: 100;
 
     @include desktop() {
       position: unset;
