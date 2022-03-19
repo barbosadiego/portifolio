@@ -47,6 +47,7 @@ h1 {
   place-items: center;
   cursor: pointer;
   max-width: 350px;
+  height: 180px;
 }
 .container .link a {
   font-size: 2rem;

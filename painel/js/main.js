@@ -111,6 +111,10 @@ const data = [
     url: "./painel/images/capa-28.jpg",
     link: "./portfolio-figma/index.html",
   },
+  {
+    url: "./painel/images/capa-29.jpg",
+    link: "./venturastic-figma/index.html",
+  }
 ];
 
 const container = document.querySelector('.container');
