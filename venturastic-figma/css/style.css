@@ -50,6 +50,7 @@ section {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative;
 }
 .header__nav .logo svg {
   height: 70px;
@@ -66,6 +67,8 @@ section {
   align-items: center;
   justify-content: center;
   transform: translateY(-100%);
+  z-index: 10;
+  transition: transform 0.3s ease;
 }
 @media screen and (min-width: 1170px) {
   .header__nav .list {
@@ -79,6 +82,35 @@ section {
 }
 .header__nav .list.active {
   transform: translateY(0);
+}
+.header__nav .list .close-menu {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  padding: 20px 10px;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+}
+@media screen and (min-width: 1170px) {
+  .header__nav .list .close-menu {
+    display: none;
+  }
+}
+.header__nav .list .close-menu .line {
+  display: inline-block;
+  height: 4px;
+  width: 30px;
+  background-color: #009CC4;
+  transform: rotate(45deg);
+}
+.header__nav .list .close-menu .line::before {
+  content: "";
+  display: inline-block;
+  height: 4px;
+  width: 30px;
+  background-color: #009CC4;
+  transform: translateY(-10px) rotate(-90deg);
 }
 .header__nav .list a {
   padding: 30px;

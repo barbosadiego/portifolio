@@ -66,6 +66,7 @@ section{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
 
     .logo svg{
       height: 70px;
@@ -83,6 +84,8 @@ section{
       align-items: center;
       justify-content: center;
       transform: translateY(-100%);
+      z-index: 10;
+      transition: transform .3s ease;
       @include desktop(){
         position: initial;
         height: auto;
@@ -94,6 +97,37 @@ section{
 
       &.active{
         transform: translateY(0);
+      }
+
+      .close-menu {
+        position: absolute;
+        top: 30px;
+        right: 30px;
+        padding: 20px 10px;
+        display: grid;
+        place-items: center;
+        cursor: pointer;
+        @include desktop(){
+          display: none;
+        }
+
+        .line{
+          display: inline-block;
+          height: 4px;
+          width: 30px;
+          background-color: $blue;
+          transform: rotate(45deg);
+  
+          &::before{
+            content: '';
+            display: inline-block;
+            height: 4px;
+            width: 30px;
+            background-color: $blue;
+            transform: translateY(-10px) rotate(-90deg);
+          }
+
+        }
       }
 
       a{
