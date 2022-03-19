@@ -31,6 +31,12 @@ section {
   margin: 0 auto;
 }
 
+.btn {
+  border: 1px solid #009CC4;
+  padding: 0.8rem 0.8rem;
+  color: #009CC4;
+}
+
 .header {
   padding: 10px;
 }
@@ -185,6 +191,9 @@ section {
     display: flex;
   }
 }
+.more-about-us__text {
+  margin-bottom: 30px;
+}
 @media screen and (min-width: 1170px) {
   .more-about-us__text {
     flex: 1;
@@ -290,12 +299,17 @@ section {
     flex: 1;
   }
 }
+.leader__text {
+  text-align: center;
+}
 @media screen and (min-width: 1170px) {
   .leader__text {
     padding-right: 50px;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+    align-items: flex-start;
+    text-align: unset;
   }
 }
 .leader__text span {
@@ -318,6 +332,10 @@ section {
   .leader__text p {
     max-width: 400px;
   }
+}
+.leader__text .btn {
+  margin-top: 30px;
+  display: inline-block;
 }
 .leader__info ul li {
   display: flex;
