@@ -26,8 +26,19 @@ section {
   padding: 10px;
 }
 
+.wrapper {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
 .header {
   padding: 10px;
+}
+@media screen and (min-width: 1170px) {
+  .header {
+    max-width: 1140px;
+    margin: 0 auto;
+  }
 }
 .header__nav {
   display: flex;
@@ -50,20 +61,40 @@ section {
   justify-content: center;
   transform: translateY(-100%);
 }
+@media screen and (min-width: 1170px) {
+  .header__nav .list {
+    position: initial;
+    height: auto;
+    transform: translateY(0);
+    flex-direction: row;
+    justify-content: flex-end;
+    gap: 30px;
+  }
+}
 .header__nav .list.active {
   transform: translateY(0);
 }
 .header__nav .list a {
   padding: 30px;
   display: block;
+  transition: 0.3s;
+}
+@media screen and (min-width: 1170px) {
+  .header__nav .list a {
+    padding: 0;
+  }
 }
 .header__nav .list a:hover {
   color: #009CC4;
-  font-weight: bold;
 }
 .header__nav .menu-mobile {
   padding: 20px;
   cursor: pointer;
+}
+@media screen and (min-width: 1170px) {
+  .header__nav .menu-mobile {
+    display: none;
+  }
 }
 .header__nav .menu-mobile::after {
   content: "";
@@ -109,11 +140,26 @@ section {
   justify-content: center;
   color: #fff;
 }
+@media screen and (min-width: 1170px) {
+  .banner .wrapper {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+  }
+  .banner .banner__text {
+    width: 60%;
+  }
+}
 .banner h1 {
   font-size: 3.875rem;
   font-family: "Unna";
   font-weight: 400;
   text-align: center;
+}
+@media screen and (min-width: 1170px) {
+  .banner h1 {
+    text-align: left;
+  }
 }
 .banner p {
   font-family: "Unna";
@@ -121,12 +167,29 @@ section {
   margin-top: 42px;
   font-size: 1.25rem;
 }
+@media screen and (min-width: 1170px) {
+  .banner p {
+    font-size: 2.25rem;
+    text-align: left;
+  }
+}
 
 .more-about-us {
   margin: 75px 0;
   display: flex;
   flex-direction: column;
   gap: 30px;
+}
+@media screen and (min-width: 1170px) {
+  .more-about-us .wrapper {
+    display: flex;
+  }
+}
+@media screen and (min-width: 1170px) {
+  .more-about-us__text {
+    flex: 1;
+    padding-right: 150px;
+  }
 }
 .more-about-us__text span {
   display: block;
@@ -157,17 +220,42 @@ section {
   position: absolute;
   left: 10px;
 }
+@media screen and (min-width: 1170px) {
+  .more-about-us__img {
+    flex: 1;
+  }
+}
 
 .middle {
   padding: 0;
 }
+@media screen and (min-width: 1170px) {
+  .middle {
+    display: flex;
+  }
+}
 .middle__card {
   padding: 50px;
+}
+@media screen and (min-width: 1170px) {
+  .middle__card {
+    flex: 1;
+    height: 367px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+  }
 }
 .middle__card .title {
   display: flex;
   align-items: center;
   gap: 20px;
+}
+@media screen and (min-width: 1170px) {
+  .middle__card .title {
+    width: 100%;
+  }
 }
 .middle__card .title span {
   font-size: 3.875rem;
@@ -178,6 +266,12 @@ section {
   font-family: "Unna";
   line-height: 1;
 }
+@media screen and (min-width: 1170px) {
+  .middle__card .title h3 {
+    text-align: center;
+    flex: 1;
+  }
+}
 .middle__card:nth-child(odd) {
   background-color: #F3F0E9;
 }
@@ -187,6 +281,22 @@ section {
   display: flex;
   flex-direction: column;
   gap: 30px;
+}
+@media screen and (min-width: 1170px) {
+  .leader .wrapper {
+    display: flex;
+  }
+  .leader .wrapper div {
+    flex: 1;
+  }
+}
+@media screen and (min-width: 1170px) {
+  .leader__text {
+    padding-right: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
 }
 .leader__text span {
   font-size: 1rem;
@@ -204,6 +314,11 @@ section {
 .leader__text p {
   margin-bottom: 30px;
 }
+@media screen and (min-width: 1170px) {
+  .leader__text p {
+    max-width: 400px;
+  }
+}
 .leader__info ul li {
   display: flex;
   align-items: center;
@@ -212,9 +327,20 @@ section {
 .leader__info ul li div {
   flex: 0 0 auto;
 }
+@media screen and (min-width: 1170px) {
+  .leader__info ul li div {
+    flex: 1;
+  }
+}
 .leader__info ul li p {
   padding-left: 20px;
   font-size: 1.25rem;
+}
+@media screen and (min-width: 1170px) {
+  .leader__info ul li p {
+    text-align: left;
+    flex: 4;
+  }
 }
 
 .team {
@@ -235,11 +361,26 @@ section {
   margin-bottom: 30px;
   line-height: 1;
 }
+@media screen and (min-width: 1170px) {
+  .team h1 {
+    font-size: 2.5rem;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 16px 0 30px 0;
+  }
+}
 .team p {
   font-size: 1rem;
   font-weight: 200;
   margin-bottom: 30px;
   padding: 0 30px;
+}
+@media screen and (min-width: 1170px) {
+  .team p {
+    font-size: 1.3rem;
+    max-width: 80%;
+    margin: 0 auto 50px;
+  }
 }
 
 .footer {
@@ -253,6 +394,17 @@ section {
   flex-direction: column;
   align-items: center;
   gap: 20px;
+}
+@media screen and (min-width: 1170px) {
+  .footer__links, .footer ul {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+@media screen and (min-width: 1170px) {
+  .footer ul:last-child {
+    justify-content: center;
+  }
 }
 .footer a {
   color: #fff;
@@ -270,6 +422,12 @@ section {
   text-align: center;
   font-family: "Unna";
   line-height: 1.6;
+}
+@media screen and (min-width: 1170px) {
+  .bottom .wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

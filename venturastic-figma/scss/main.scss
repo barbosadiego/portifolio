@@ -44,9 +44,18 @@ section{
   padding: 10px;
 }
 
+.wrapper{
+  max-width: 1140px;
+  margin: 0 auto;
+  // display: flex;
+}
+
 .header{
   padding: 10px;
-  // height: 134px;
+  @include desktop(){
+    max-width: 1140px;
+    margin: 0 auto;
+  }
 
   &__nav{
     display: flex;
@@ -68,9 +77,15 @@ section{
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      // gap: 70px;
       transform: translateY(-100%);
-      // transition: .3s ease;
+      @include desktop(){
+        position: initial;
+        height: auto;
+        transform: translateY(0);
+        flex-direction: row;
+        justify-content: flex-end;
+        gap: 30px;
+      }
 
       &.active{
         transform: translateY(0);
@@ -79,10 +94,14 @@ section{
       a{
         padding: 30px;
         display: block;
+        transition: .3s;
+        @include desktop(){
+          padding: 0;
+        }
 
         &:hover{
           color: $blue;
-          font-weight: bold;
+          // font-weight: bold;
         }
       }
     }
@@ -90,6 +109,9 @@ section{
     .menu-mobile{
       padding: 20px;
       cursor: pointer;
+      @include desktop(){
+        display: none;
+      }
 
       &::after{
         content: '';
@@ -142,12 +164,25 @@ section{
   align-items: center;
   justify-content: center;
   color: $white;
+  @include desktop(){
+    .wrapper{
+      display: flex;
+      justify-content: flex-end;
+      width: 100%;
+    }
+    .banner__text{
+      width: 60%;
+    }
+  }
 
   h1{
     font-size: 3.875rem;
     font-family: 'Unna';
     font-weight: 400;
     text-align: center;
+    @include desktop(){
+      text-align: left;
+    }
   }
 
   p{
@@ -155,6 +190,10 @@ section{
     text-align: center;
     margin-top: 42px;
     font-size: 1.25rem;
+    @include desktop(){
+      font-size: 2.25rem;
+      text-align: left;
+    }
   }
 }
 
@@ -163,8 +202,18 @@ section{
   display: flex;
   flex-direction: column;
   gap: 30px;
+  @include desktop(){
+    .wrapper{
+      display: flex;
+    }
+  }
 
   &__text{
+    @include desktop(){
+      flex: 1;
+      padding-right: 150px;
+    }
+
     span{
       display: block;
       color: $blue;
@@ -198,18 +247,38 @@ section{
       }
     }
   }
+
+  @include desktop(){
+    &__img{
+      flex: 1;
+    }
+  }
 }
 
 .middle{
   padding: 0;
+  @include desktop(){
+    display: flex;
+  }
 
   &__card{
     padding: 50px;
+    @include desktop(){
+      flex: 1;
+      height: 367px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
+    }
 
     .title{
       display: flex;
       align-items: center;
       gap: 20px;
+      @include desktop(){
+        width: 100%;
+      }
 
       span{
         font-size: 3.875rem;
@@ -220,6 +289,10 @@ section{
         font-size: 1.75rem;
         font-family: 'Unna';
         line-height: 1;
+        @include desktop(){
+          text-align: center;
+          flex: 1;
+        }
       }
     }
 
@@ -234,8 +307,22 @@ section{
   display: flex;
   flex-direction: column;
   gap: 30px;
+  @include desktop(){
+    .wrapper{
+      display: flex;
+    }
+    .wrapper div{
+      flex: 1;
+    }
+  }
 
   &__text{
+    @include desktop(){
+      padding-right: 50px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+    }
     span{
       font-size: 1rem;
       color: $blue;
@@ -253,6 +340,9 @@ section{
 
     p{
       margin-bottom: 30px;
+      @include desktop(){
+        max-width: 400px;
+      }
     }
   }
 
@@ -260,14 +350,21 @@ section{
     display: flex;
     align-items: center;
     margin-top: 30px;
-
+    
     div{
       flex: 0 0 auto;
+      @include desktop(){
+        flex: 1;
+      }
     }
 
     p{
       padding-left: 20px;
       font-size: 1.25rem;
+      @include desktop(){
+        text-align: left;
+        flex: 4;
+      }
     }
   }
 }
@@ -290,6 +387,12 @@ section{
     font-weight: 400;
     margin-bottom: 30px;
     line-height: 1;
+    @include desktop(){
+      font-size: 2.5rem;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 16px 0 30px 0;
+    }
   }
 
   p{
@@ -297,6 +400,11 @@ section{
     font-weight: 200;
     margin-bottom: 30px;
     padding: 0 30px;
+    @include desktop(){
+      font-size: 1.3rem;
+      max-width: 80%;
+      margin: 0 auto 50px;
+    }
   }
 }
 
@@ -311,6 +419,16 @@ section{
     flex-direction: column;
     align-items: center;
     gap: 20px;
+    @include desktop(){
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+
+  @include desktop(){
+    ul:last-child{
+      justify-content: center;
+    }
   }
 
   a{
@@ -331,4 +449,10 @@ section{
   text-align: center;
   font-family: 'Unna';
   line-height: 1.6;
+  @include desktop(){
+    .wrapper{
+      display: flex;
+      justify-content: space-between;
+    }
+  }
 }
