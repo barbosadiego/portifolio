@@ -1,2 +1,31 @@
-@import '../components/mixins';
+@use '../components/mixins';
 
+$accent-color: #E62721;
+$text-color: #fff;
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  height: 100vh;
+  background-image: url(../images/background-mobile.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 30px;
+  font-family: 'Mulish', sans-serif;
+  display: flex;
+  flex-direction: column;
+}
+
+a{
+  text-decoration: none;
+  color: $text-color;
+}
+
+ul{
+  list-style: none;
+}
