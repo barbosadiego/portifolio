@@ -26,6 +26,11 @@ body {
   }
 }
 
+.wrapper {
+  max-width: 980px;
+  margin: 0 auto;
+}
+
 a {
   text-decoration: none;
   color: #fff;
@@ -61,6 +66,11 @@ body {
     background-size: cover;
     padding: 80px 128px 50px 128px;
   }
+}
+
+.wrapper {
+  max-width: 980px;
+  margin: 0 auto;
 }
 
 a {
@@ -182,6 +192,11 @@ body {
   }
 }
 
+.wrapper {
+  max-width: 980px;
+  margin: 0 auto;
+}
+
 a {
   text-decoration: none;
   color: #fff;
@@ -195,6 +210,19 @@ ul {
   flex: 1;
   display: flex;
   justify-content: center;
+}
+@media screen and (min-width: 1170px) {
+  .main {
+    justify-content: flex-start;
+  }
+}
+.main .wrapper {
+  display: flex;
+}
+@media screen and (min-width: 1170px) {
+  .main .wrapper {
+    width: 100%;
+  }
 }
 .main .btn {
   display: block;
@@ -215,9 +243,28 @@ ul {
   color: #fff;
   align-self: center;
 }
+@media screen and (min-width: 1170px) {
+  .main__intro {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    text-align: left;
+    align-items: flex-start;
+    height: 100%;
+    gap: 30px;
+    padding-top: 128px;
+  }
+}
 .main__title {
   display: flex;
   flex-direction: column;
+}
+@media screen and (min-width: 1170px) {
+  .main__title {
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin-bottom: 25px;
+  }
 }
 .main__title span {
   font-size: 1.5rem;
@@ -230,6 +277,12 @@ ul {
   line-height: 80px;
   font-weight: 500;
 }
+@media screen and (min-width: 1170px) {
+  .main__title h1 {
+    font-size: 8rem;
+    line-height: 100px;
+  }
+}
 .main__title p {
   color: #E62721;
   font-size: 1.5rem;
@@ -241,11 +294,21 @@ ul {
   margin-bottom: 50px;
   line-height: 30px;
 }
+@media screen and (min-width: 1170px) {
+  .main__title p {
+    margin-bottom: 0px;
+  }
+}
 .main__social {
   display: none;
 }
 .main__info {
   display: none;
+}
+@media screen and (min-width: 1170px) {
+  .main__info {
+    display: initial;
+  }
 }
 
 * {
@@ -274,6 +337,11 @@ body {
     background-size: cover;
     padding: 80px 128px 50px 128px;
   }
+}
+
+.wrapper {
+  max-width: 980px;
+  margin: 0 auto;
 }
 
 a {

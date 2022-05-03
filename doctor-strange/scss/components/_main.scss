@@ -1,10 +1,20 @@
 @import '../components/reset';
+@import './functions';
 
 .main{
   flex: 1;
   display: flex;
   justify-content: center;
-  
+  @include device(desktop){
+    justify-content: flex-start;
+  }
+
+  .wrapper{
+    display: flex;
+    @include device(desktop){
+      width: 100%;
+    }
+  }
 
   .btn{
     display: block;
@@ -26,11 +36,27 @@
   &__intro{
     color: $text-color;
     align-self: center;
+
+    @include device(desktop){
+      display: flex;
+      flex-direction: column;
+      max-width: 600px;
+      text-align: left;
+      align-items: flex-start;
+      height: 100%;
+      gap: 30px;
+      padding-top: 128px;
+    }
   }
 
   &__title{
     display: flex;
     flex-direction: column;
+    @include device(desktop){
+      align-items: flex-start;
+      justify-content: flex-start;
+      margin-bottom: 25px;
+    }
     
     span{
       font-size: 1.5rem;
@@ -43,6 +69,10 @@
       font-size: 4.5rem;
       line-height: 80px;
       font-weight: 500;
+      @include device(desktop){
+        font-size: rem(128);
+        line-height: 100px;
+      }
     }
 
     p{
@@ -55,6 +85,9 @@
       margin-top: 10px;
       margin-bottom: 50px;
       line-height: 30px;
+      @include device(desktop){
+        margin-bottom: 0px;
+      }
     }
   }
 
@@ -64,5 +97,8 @@
 
   &__info{
     display: none;
+    @include device(desktop){
+      display: initial;
+    }
   }
 }
