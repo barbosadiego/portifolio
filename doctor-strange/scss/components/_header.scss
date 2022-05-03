@@ -6,7 +6,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-
+  
   &__links{
     position: fixed;
     top: 0;
@@ -19,7 +19,14 @@
     align-items: center;
     justify-content: center;
     gap: 65px;
-    transform: translateY(100%);
+    z-index: 100;
+    transform: translateY(-100%);
+    transition: all .3s;
+    
+    &.active{
+      transform: translateY(0%);
+    }
+    
     @include device(tablet){
       position: unset;
       flex-direction: row;
@@ -50,7 +57,7 @@
       }
     }
   }
-
+  
   &__mobile{
     width: 36px;
     height: 36px;
@@ -58,6 +65,7 @@
     align-items: center;
     position: relative;
     cursor: pointer;
+    z-index: 100;
     @include device(tablet){
       display: none;
     }
@@ -71,14 +79,28 @@
       height: 4px;
       background-color: white;
       position: absolute;
+      border-radius: 3px;
     }
-
+    
     .line::before{
       transform: translateY(12px);
+      transition: all .3s;
     }
-
+    
     .line::after{
       transform: translateY(-12px);
+      transition: all .3s;
     }
+  }
+
+  &__links.active ~ .header__mobile .line{
+    height: 0px;
+  }  
+  &__links.active ~ .header__mobile .line::after{
+    transform: rotate(45deg);
+  }
+
+  &__links.active ~ .header__mobile .line::before{
+    transform: rotate(-45deg);
   }
 }
