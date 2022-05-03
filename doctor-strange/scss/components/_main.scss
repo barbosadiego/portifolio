@@ -4,6 +4,7 @@
   flex: 1;
   display: flex;
   justify-content: center;
+  
 
   .btn{
     display: block;
@@ -15,6 +16,7 @@
     margin: auto;
     font-size: 1.3rem;
     color: white;
+    cursor: pointer;
 
     i{
       margin-left: 10px;

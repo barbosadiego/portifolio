@@ -1,4 +1,5 @@
-@use '../components/mixins';
+@import '../components/mixins';
+
 
 $accent-color: #E62721;
 $text-color: #fff;
@@ -19,6 +20,15 @@ body{
   font-family: 'Mulish', sans-serif;
   display: flex;
   flex-direction: column;
+  @include device(desktop){
+    background: linear-gradient(90deg, #000 0%, rgba(0,0,0,.81) 40%, rgba(0,0,0,0) 85%), url(../images/background.jpg);
+    background-position: right;
+    background-blend-mode: multiply;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 80px 128px 50px 128px;
+  }
+
 }
 
 a{

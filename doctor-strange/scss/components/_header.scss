@@ -1,8 +1,11 @@
+@import './mixins';
+@import './functions';
+@import './reset';
+
 .header{
   display: flex;
   justify-content: space-between;
   align-items: center;
-
 
   &__links{
     position: fixed;
@@ -17,10 +20,34 @@
     justify-content: center;
     gap: 65px;
     transform: translateY(100%);
-
+    @include device(tablet){
+      position: unset;
+      flex-direction: row;
+      width: unset;
+      height: 0;
+      top: 0;
+      left: 0;
+      background-color: unset;
+      gap: 34px;
+    }
+    
     & a{
       text-transform: uppercase;
       font-size: 2.25rem;
+      @include device(tablet){
+        font-size: rem(18);
+        padding: 6px;
+        transition: all .3s;
+        text-shadow: 2px 2px 2px #000;
+        
+        &:hover{
+          background-color: $accent-color;
+          text-shadow: none;
+        }
+      }
+      @include device(desktop){
+        font-size: rem(23);
+      }
     }
   }
 
@@ -31,6 +58,9 @@
     align-items: center;
     position: relative;
     cursor: pointer;
+    @include device(tablet){
+      display: none;
+    }
     
     .line,
     .line::before,
