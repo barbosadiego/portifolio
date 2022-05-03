@@ -114,6 +114,10 @@ const data = [
   {
     url: "./painel/images/capa-29.jpg",
     link: "./venturastic-figma/index.html",
+  },
+  {
+    url: "./painel/images/capa-30.jpg",
+    link: "./doctor-strange/index.html",
   }
 ];
 
