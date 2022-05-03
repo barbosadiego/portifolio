@@ -11,7 +11,9 @@ $text-color: #fff;
 }
 
 body{
+  position: relative;
   height: 100vh;
+  width: 100%;
   background-image: url(../images/background-mobile.jpg);
   background-size: cover;
   background-repeat: no-repeat;
@@ -20,6 +22,8 @@ body{
   font-family: 'Mulish', sans-serif;
   display: flex;
   flex-direction: column;
+  animation: zoom .5s forwards;
+  overflow: hidden;
   @include device(desktop){
     background: linear-gradient(90deg, #000 0%, rgba(0,0,0,.81) 40%, rgba(0,0,0,0) 85%), url(../images/background.jpg);
     background-position: right;
@@ -29,6 +33,15 @@ body{
     padding: 80px 128px 50px 128px;
   }
 
+}
+
+@keyframes zoom {
+  0%{
+    transform: scale(3);
+  }
+  100%{
+    transform: scale(1);
+  }
 }
 
 .wrapper{
